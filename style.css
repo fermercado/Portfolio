@@ -78,7 +78,6 @@ main {
   background-repeat: no-repeat;
   background-position: right ;
   background-size:80rem;
-  background-attachment: fixed;
  
 }
 
@@ -132,6 +131,122 @@ h2 {
   font-weight: 500;
   margin-top: 1rem;
 }
+
+.main-info {
+  width: 100%;
+  height: 200vh;
+  background-image: url(img/Bg\ main\ \(1\)\ \(1\).png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+  
+}
+
+.main-about {
+  padding-top: 3rem;
+  width: 70%;
+  margin: auto;
+}
+
+.name-info {
+  display: flex;
+  margin-bottom:1rem ;
+}
+
+h3 {
+  padding-left: 1.75rem;
+  font-size: 2rem;
+  color: #4558BF;
+  
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 4px solid #4558BF;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px  48px 48px 48px;
+  
+
+
+
+}
+
+h4 {
+  font-size:1.5rem ;
+  line-height: 48px;
+  font-weight:500;
+  color: #ABAAAA;
+  
+}
+
+.button-info {
+ 
+  font-size:1.25rem ;
+  width: 208px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#5D70DB, #18204D );
+  border: 0;
+  color: #ffff;
+  font-weight: bold;
+  margin-top: 48px;
+
+}
+
+.button-info img {
+  padding-left: 12px;
+}
+
+.main-ability {
+  padding-top: 5rem;
+  width: 70%;
+  margin: auto;
+}
+
+.main-ability-container {
+  display: flex;
+  width: 100%;
+  border: 4px solid #4558BF;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px  48px ;
+
+
+
+}
+
+h5 {
+  color: #ABAAAA;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 12px;
+  font-weight: bold;
+}
+
+.ability-info{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 1500px) {

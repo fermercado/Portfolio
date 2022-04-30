@@ -132,7 +132,7 @@ h2 {
   margin-top: 1rem;
 }
 
-.main-info {
+.main-bg {
   width: 100%;
   height: 200vh;
   background-image: url(img/Bg\ main\ \(1\)\ \(1\).png);
@@ -143,9 +143,14 @@ h2 {
   
 }
 
+.main-container {
+  width: 70%;
+  margin: auto;
+}
+
 .main-about {
   padding-top: 3rem;
-  width: 70%;
+  width: 100%;
   margin: auto;
 }
 
@@ -207,7 +212,7 @@ h4 {
 
 .main-ability {
   padding-top: 5rem;
-  width: 70%;
+  width: 100%;
   margin: auto;
 }
 
@@ -236,9 +241,92 @@ h5 {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   
 }
+
+.projects-info{
+  width: 100%;
+  margin-top: 100px;
+
+}
+
+.projects-container {
+  width: 100%;
+  border: 4px solid #4558BF;
+  border-radius: 10px;
+  padding: 60px  48px ;
+}
+
+.projetcs-show {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.projects-show-img {
+  margin-right: 50px;
+
+ width: 100%;
+}
+
+.projects-show-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.projects-show-text{
+  max-width: 500px;
+  width: 80%;
+
+}
+
+h6 {
+  font-size: 2rem;
+  color: #4558BF;
+  text-align: left;
+  padding-bottom: 10px;
+
+}
+
+p {
+  font-size:1.5rem ;
+  line-height: 40px;
+  font-weight:500;
+  color: #ABAAAA;
+}
+
+.buttons-project {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 32px;
+}
+
+
+.button-deploy, .button-git {
+  font-size:1.25rem ;
+  width: 142px;
+  height: 48px;
+  border-radius: 5px;
+  background: linear-gradient(#5D70DB, #18204D );
+  border: 0;
+  color: #ffff;
+  font-weight: bold;
+  margin-left: 36px;
+  
+}
+
+.division {
+  width: 100%;
+  height: 2px;
+  background-color: #3f3f3f;
+  margin-top: 32px;
+}
+
+
+
+
 
 
 

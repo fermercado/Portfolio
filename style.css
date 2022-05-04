@@ -25,8 +25,10 @@ main {
 
 .header-container {
   width: 100%;
-  background-color: #151515;
+  background-color: #151515cb;
   position: fixed;
+  backdrop-filter: blur(15px);
+
 
 }
 
@@ -58,7 +60,6 @@ main {
   text-transform: uppercase;
   color: #4558bf;
   font-weight: bold;
- 
   font-size: 1.2rem;
 }
 
@@ -135,6 +136,7 @@ h2 {
 .main-bg {
   width: 100%;
   padding-bottom: 60px;
+  padding-top: 3rem;
   background-image: url(img/Bg\ main\ \(1\)\ \(1\).png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -149,7 +151,6 @@ h2 {
 }
 
 .main-about {
-  padding-top: 3rem;
   width: 100%;
   margin: auto;
 }
@@ -191,7 +192,7 @@ h4 {
 
 .button-info {
  
-  font-size:1.25rem ;
+  
   width: 208px;
   height: 50px;
   border-radius: 5px;
@@ -200,9 +201,16 @@ h4 {
   align-items: center;
   background: linear-gradient(#5D70DB, #18204D );
   border: 0;
-  color: #ffff;
-  font-weight: bold;
   margin-top: 48px;
+  cursor: pointer;
+
+}
+
+.button-info a {
+  color: #ffff;
+  font-size:1.25rem ;
+  font-weight: bold;
+  text-decoration: none;
 
 }
 
@@ -223,7 +231,7 @@ h4 {
   border-radius: 10px;
   justify-content: space-between;
   align-items: center;
-  padding: 60px  48px ;
+  padding: 48px ;
 
 
 
@@ -238,6 +246,8 @@ h5 {
 }
 
 .ability-info{
+  margin: auto;
+  max-width: 1180px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -254,7 +264,7 @@ h5 {
   width: 100%;
   border: 4px solid #4558BF;
   border-radius: 10px;
-  padding: 48px  48px 48px 48px;
+  padding: 40px  48px 40px 48px;
 
 }
 
@@ -262,23 +272,27 @@ h5 {
   display: flex;
   width: 100%;
   justify-content: space-between;
+
 }
 
 .projects-show-img {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
   margin-right: 50px;
-
- width: 100%;
 }
 
 .projects-show-img img {
+  max-width: 600px;
   width: 100%;
   border-radius: 10px;
 }
 
 
 .projects-show-text{
-  max-width: 500px;
-  width: 80%;
+  max-width: 700px;
+  width: 90%;
 
 }
 
@@ -286,15 +300,15 @@ h6 {
   font-size: 2rem;
   color: #4558BF;
   text-align: left;
-  padding-bottom: 10px;
 
 }
 
 p {
-  font-size:1.5rem ;
-  line-height: 40px;
+  font-size:1.2rem ;
+  line-height: 36px;
   font-weight:500;
   color: #ABAAAA;
+  
 }
 
 .buttons-project {
@@ -361,37 +375,46 @@ p {
 
 .visibleHidden {
   display: flex;
-  width: 965px;
+  max-width: 965px;
+ 
+  width: 80%;
   
-  overflow: hidden;
+ 
   
 }
 
 .bloco1 {
   display: flex;
+  max-width: 965px;
   width: 100%;
   justify-content: space-between;
-
+  gap: 30px;
 }
 
 .slide {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 280px;
-  height: 200px;
+  justify-content: center;
+  max-width: 280px;
+  width: 100%;
+  height: 190px;
   border-radius: 10px;
   cursor: pointer;
 }
 .slide-img{
   max-width: 100%;
   overflow: hidden;
-  height: 147px;
+  
 }
 .slide-img img{
+  max-width: 280px;
   width: 100%;
-  border: 4px solid #3F51B5;
-  border-radius: 10px;
+   border-top:  4px solid #3F51B5;
+  border-left:  4px solid #3F51B5;
+  border-right:  4px solid #3F51B5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
  
 }
 
@@ -404,11 +427,13 @@ p {
   font-size: 1.25rem;
   font-weight: bold;
   width: 100%;
-  height: 54px;
+  height: 64px;
   background: linear-gradient(#5D70DB,#18204D );
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   letter-spacing: 1px;
+  
+ 
   
 }
 
@@ -445,18 +470,22 @@ p {
   
 }
 
+.contatcs-info-container {
+  display: flex;
+  justify-content: left;
+}
+
 .contacts-info {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
 }
 
 .contacts {
   display: flex;
   flex-direction: column;
-  padding-left: 100px;
+  padding-left: 70px;
 
 }
 
@@ -500,7 +529,6 @@ p {
 }
 .contact-phone p {
   color :#abaaaa;
-
   padding-left: 16px;
   font-size: 1.5rem ;
   font-weight: 600;
@@ -533,66 +561,216 @@ footer {
 
 
 
-
-
-
 @media (max-width: 1500px) {
 
+  
+  
+  .menu-nav {
+    font-size: 1rem;
+  }
+  
+  .button-top {
+    font-size: 1rem;
+  }
+  
+  .home-bg {
+    height: 90vh;
+    background-position: contain ;
+    background-size:70rem;
+   
+  }
+  
+  .home {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-name {
 
+    background-size:25rem;
+  }
   .home-photo img {
 
 
     width: 400px;
 
   }
+  
+  
   h1 {
     
     font-size: 2.5rem;
-   
+    
   }
   
   h2 {
-    color: #ABAAAA;
+    
     font-size: 2.2rem;
+  
+  }
+  
+  
+  
+  h3 {
+    font-size: 1.5rem; 
+    
+  }
+  
+  
+  h4 {
+    font-size:1.5rem ;
+    line-height: 48px;
+    font-weight: 500;
+  }
+  
+  .button-info img {
+    padding-left: 12px;
+  }
+  
+  
+  
+  h5 {
+    color: #ABAAAA;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 12px;
+    font-weight: bold;
+  }
+  
+
+  .ability {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+  .ability img {
+    width: 80%;
+
+  }
+  
+  
+  .projects-show-img {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    margin-right: 50px;
+  }
+  
+  .projects-show-img img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  
+  .projects-show-text{
+    max-width: 600px;
+    width: 90%;
+  
+  }
+  
+  h6 {
+    font-size: 1.75rem;
+    color: #4558BF;
+    text-align: left;
+  
+  }
+  
+  p {
+    font-size:1.2rem ;
+    line-height: 32px;
+    font-weight:500;
+    color: #ABAAAA;
+    
   }
 
-
-  .menu-nav {
+  .slide-img{
+    max-width: 100%;
+    overflow: hidden;
+    height: 110px;
   
+  }
+  
+  
+  .slide-tittle{
     font-size: 1rem;
+    height: 48px;
   }
   
-  .button-top {
-    font-size: 1px;
+  
+  .contacts-bg{
+    width: 100%;
+    height: 90vh;
+    background-image: url(img/contacts-bg.png);
+    background-repeat: no-repeat;
+    background-size: 72rem;
+    
   }
-
-  .home-name {
-
-    background-size:25rem;
-  }
-
-
-  .home-bg {
-
-    background-size:70rem;
+  
+  .contacts-img img {
+    width: 400px;
    
-   
+  
   }
+  
 
+  .name-contact-info img {
+    width: 30px;
+  
+  }
+  .name-contact-info p{
+    
+    font-size: 2.5rem;
+   
+  
+  }
+  
+
+
+  .contact-mail a {
+    color :#abaaaa;
+    text-decoration: none;
+    padding-left: 16px;
+    font-size: 1.25rem ;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+ 
+  .contact-phone p {
+    color :#abaaaa;
+    padding-left: 16px;
+    font-size: 1.25rem ;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+ 
+  
+  .contacts-social img{
+   width: 50px;
+  }
 
 
 }
-
-
 @media (max-width: 1250px) {
 
-  .header-nav img {
-    display: block;
-    padding: 10px 0;
+  
+  .home-bg {
+    background-size:cover;
+    background-position: 7rem;
   }
+  
 
+  
+  .home-name {
 
-  .home-photo img {
+    background-size:20rem;
+  }
+ .home-photo img {
 
 
     width: 300px;
@@ -600,7 +778,7 @@ footer {
   }
   h1 {
 
-    
+    line-height: 3.2rem;
     font-size: 2rem;
    
   }
@@ -608,43 +786,206 @@ footer {
   h2 {
     color: #ABAAAA;
     font-size: 1.8rem;
+    margin-top: 0px;
   }
 
-
-  .menu-nav {
+  .main-bg {
+    background-size: 90rem;
+    background-position: center;
   
-    font-size: 0.75rem;
-  }
-  
-  .button-top {
-    font-size: 0.75rem;
-  }
-
-
-  .home-bg {
-
-    background-size:cover;
-    background-position: 5rem;
-    background-attachment: fixed;
     
-   
-   
   }
-  .home-name {
+  
+  
+  h3 {
+    font-size: 1.25rem; 
+    
+  }
+  
+  
+  h4 {
+    font-size:1.25rem ;
+    line-height: 48px;
+    font-weight: 500;
+  }
+  
+  .button-info img {
+    padding-left: 12px;
+  }
+
+
+  
+  
+  
+  h5 {
+    color: #ABAAAA;
+    font-size: 1.25rem;
+  }
+
+  .ability {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    width: 60%;
-    height: 500px;
-    background-image: url(img/Seta\ home.png);
-    background-repeat: no-repeat;
-    background-position: 30px;
-    background-size:20rem;
+    align-items: center;
+    
+}
+
+  .ability img {
+    width: 70%;
+
   }
+
+  .projects-container {
+    padding: 36px 40px 36px 40px;
+}
+  
+
+  .projects-show-img {
+    margin-right: 20px;
+}
+  
+  
+  .projects-show-text{
+    max-width: 700px;
+    width: 100%;
+  
+  }
+  
+  h6 {
+    font-size: 1.2rem;
+   
+  
+  }
+  
+  p {
+    font-size:1rem ;
+    line-height: 30px;
+    font-weight:500;
+    color: #ABAAAA;
+    
+  }
+
+  .buttons-project {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 32px;
+  }
+  
+  
+  .button-deploy, .button-git {
+    font-size:1rem ;
+    width: 130px;
+    height: 40px;;
+    
+  }
+  
+
+  
+  .buttonPrev img, .buttonNext img {
+   padding: 2px;
+   width: 25px;
+   
+    
+  }
+  
+  
+ 
+  .bloco1 {
+    display: flex;
+    max-width: 965px;
+    width: 100%;
+    gap: 30px;
+  }
+  
+  .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 280px;
+    width: 100%;
+    max-height: 130px;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .slide-tittle{
+     font-size: 0.8rem;
+     height: 50px;
+     letter-spacing: 0;
+
+  }
+  .slide-img{
+    max-width: 100%;
+    
+  }
+  .slide-img img{
+    width: 100%;
+    height: 100px;
+    
+  }
+  .contacts-bg{
+    background-size: cover;
+    background-position: -10rem;
+    
+  }
+  
+  .contacts-img img {
+    width: 300px;
+   
+  
+  }
+  
+
+  .name-contact-info img {
+    width: 32px;
+  
+  }
+  .name-contact-info p{
+    padding-left: 1rem;
+    
+    font-size: 2.2rem;
+   
+  
+  }
+  
+  .contacts {
+   
+    padding-left: 50px;
+}
+
+  .contact-mail a {
+    
+    font-size: 1rem ;
+    
+  }
+ 
+  .contact-phone p {
+    
+    font-size: 1rem ;
+    
+  }
+  .contact-mail img {
+    width: 36px;
+  }
+ 
+  .contact-phone img {
+  width: 36px;
+  }
+  
+ 
+  
+  .contacts-social img{
+   width: 48px;
+  }
+
+
+  
 
 
 }
+
+
 @media (max-width: 1000px) {
 
   .header-nav img {
@@ -688,27 +1029,1040 @@ footer {
 
     background-size:cover;
     background-position: 1rem;
-    background-attachment: fixed;
+
     
    
    
   }
+
+  .home-name {
+
+    background-size:15rem;
+  }
+  
+
+  h3 {
+    font-size: 1.25rem; 
+    
+  }
+  
+  
+  h4 {
+    font-size:1.2rem ;
+    line-height: 40px;
+    font-weight: 500;
+    
+  }
+  
+  .button-info img {
+    padding-left: 12px;
+  }
+
+
+  
+  
+  
+  h5 {
+    color: #ABAAAA;
+    font-size: 1rem;
+  }
+
+  .main-ability-container {
+    padding: 32px;
+}
+
+  .ability {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+  .ability img {
+    width: 65%;
+
+  }
+
+  .projects-container {
+    padding: 32px;
+}
+  
+
+  .projects-show-img {
+    margin-right: 20px;
+}
+  
+  
+  .projects-show-text{
+    max-width: 700px;
+    width: 100%;
+  
+  }
+  
+  h6 {
+    font-size: 1rem;
+   
+  
+  }
+  
+  p {
+    font-size:0.75rem ;
+    line-height: 24px;
+    font-weight:500;
+    color: #ABAAAA;
+    
+  }
+
+  .buttons-project {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 32px;
+  }
+  
+  
+  .button-deploy, .button-git {
+    font-size:0.75rem ;
+    width: 80px;
+    height: 32px;;
+    
+  }
+  
+
+  
+  .buttonPrev img, .buttonNext img {
+   padding: 2px;
+   width: 20px;
+   
+    
+  }
+  
+  
+ 
+  .bloco1 {
+    display: flex;
+    max-width: 965px;
+    width: 100%;
+    gap: 30px;
+  }
+  
+  .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 220px;
+    width: 100%;
+    max-height: 120px;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .slide-tittle{
+     font-size: 0.5rem;
+     height: 50px;
+     letter-spacing: 0;
+
+  }
+  .slide-img{
+    max-width: 100%;
+    
+  }
+  .slide-img img{
+    width: 100%;
+    height: 100%;
+   
+  }
+
+
+
+  .contacts-bg{
+    background-size: cover;
+    background-position: -20rem;
+    
+  }
+  
+  .contacts-img img {
+    width: 250px;
+   
+  
+  }
+  
+
+  .name-contact-info img {
+    width: 24px;
+  
+  }
+  .name-contact-info p{
+    
+    font-size: 2rem;
+   
+  
+  }
+  
+  .contacts {
+   
+    padding-left: 40px;
+}
+
+  .contact-mail a {
+    
+    font-size: 1rem ;
+    
+  }
+ 
+  .contact-phone p {
+    
+    font-size: 1rem ;
+    
+  }
+  .contact-mail img {
+    width: 32px;
+  }
+ 
+  .contact-phone img {
+  width: 32px;
+  }
+  
+ 
+  
+  .contacts-social img{
+   width: 40px;
+  }
+
+
+
+} 
+
+@media (max-width: 800px) {
+
+  main {
+    width: 100%;
+    margin: auto;
+    padding-top: 86px;
+  }
+  
+
+ 
+  
+ 
+  
+  .menu-nav {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4558bf;
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+
+  
+  .home-bg {
+    background-image: url(img/bgmobile.png);
+    background-position: top right ;
+    background-size: 30rem;
+
+   
+  }
+
+  
+  .home-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    justify-content: center;
+  }
+  
   .home-name {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
-    width: 60%;
-    height: 500px;
-    background-image: url(img/Seta\ home.png);
+    text-align: center;
+    width: 100%;
+    background-image: none;
+    height: 130px;
+   
+  }
+  .home-photo {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 120px;
+    
+  
+  }
+  
+  .home-photo img{
+  
+    width: 300px;
+  
+  }
+  
+  
+  h1 {
+    color: #4558bf;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 3rem;
+  }
+  
+  h2 {
+    color: #ABAAAA;
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
+  
+  .main-bg {
+    background-image: url(img/Bg\ main\ mobile.png);
+    background-size: cover;
+  
+  }
+  
+  .main-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .main-about {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .name-info {
+    display: flex;
+    margin-bottom:1rem ;
+  }
+  .name-info img {
+    width: 22px;;
+  }
+  
+  h3 {
+    padding-left: 0.75rem;
+    font-size: 1.25rem;
+    color: #4558BF;
+    
+  }
+  
+  .text-info {
+    padding: 32px;
+
+  }
+  
+  h4 {
+    font-size:1.5rem ;
+    line-height: 40px;
+    font-weight:500;
+    color: #ABAAAA;
+    
+  }
+  
+
+  
+  .button-info a {
+    color: #ffff;
+    font-size:1.25rem ;
+    font-weight: bold;
+    text-decoration: none;
+  
+  }
+  
+  .button-info img {
+    padding-left: 12px;
+  }
+  
+  .main-ability {
+    padding-top: 5rem;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .main-ability-container {
+    display: flex;
+    width: 100%;
+    border: 4px solid #4558BF;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px ;
+
+  }
+  
+  h5 {
+    font-size: 1rem;
+    padding-bottom: 8px;
+   
+  }
+  
+  .ability-info{
+    margin: auto;
+    max-width: 1180px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    row-gap: 20px;
+    
+  }
+  
+
+
+
+
+  .ability {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+  .ability img {
+    width: 100%;
+    height: 100px;
+
+  }
+  
+  .projects-info{
+    width: 100%;
+    margin-top: 100px;
+  
+  }
+  
+  .projects-container {
+    padding: 32px;
+   
+  
+  }
+  
+  .projetcs-show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+   
+  
+  }
+  
+  .projects-show-img {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 22px;
+   
+  }
+  
+  .projects-show-img img {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  
+  .projects-show-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    width: 90%;
+  
+  }
+  
+  h6 {
+    font-size: 1.5rem;
+    color: #4558BF;
+    text-align: center;
+  
+  }
+  
+  .projects-show-text p {
+    font-size:1.35rem ;
+    line-height: 36px;
+    font-weight:500;
+    color: #ABAAAA;
+    display: none;
+    
+    
+  }
+  
+  .buttons-project {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 32px;
+    gap: 32px;
+  }
+  
+  
+  .button-deploy, .button-git {
+    font-size:1rem ;
+    width: 130px;
+    height: 40px;
+    margin-left: 0;
+    
+  }
+  
+  .division {
+  
+    background-color: transparent;
+   
+   
+  }
+  
+  .projects-carousel {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+  
+  }
+  
+  .buttonNext {
+
+    padding: 5px;
+    
+  }
+  .buttonPrev {
+ 
+    padding: 5px;
+    
+    
+  }
+  .buttonPrev img, .buttonNext img {
+   padding: 0;
+   
+    
+  }
+  
+  
+  .visibleHidden {
+    display: flex;
+    max-width: 500px;
+    width: 80%;
+    
+   
+    
+  }
+  
+  .bloco1 {
+    display: flex;
+    max-width: 965px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width:200px;
+    width: 100%;
+    max-height: 150px;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 30px;
+  }
+  .slide-img{
+    max-width: 100%;
+    overflow: hidden;
+    
+  }
+  .slide-img img{
+    
+    width: 100%;
+
+  
+   
+  }
+
+  .invisible{
+    display: none;
+  }
+  
+  
+  .slide-tittle{
+    font-size: 1.5rem;
+    
+   
+   
+    
+    
+  }
+  
+  
+  
+  .bloco2 {
+    display: none;
+  }
+  
+  
+  .contacts-bg{
+    background-image: url(img/bgcontatcmobile.png);
     background-repeat: no-repeat;
-    background-position: 20px;
-    background-size:15rem;
+    background-position: top left ;
+    background-size: 30rem;
+
+    
+  }
+
+  .contacts-img {
+   
+    justify-content: center;
+    
+  
+  }
+  
+
+  .contacts-img img {
+    width: 264px;
+  
+  }
+  
+  .contacts-container {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+    row-gap: 76px;
+    max-width: 570px;
+    width: 70%;
+    
+  }
+  
+  .contacts-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: none;
+   
+  }
+  
+  .contacts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    align-items: left;
+   
+  
+  }
+  
+  
+  .name-contact-info {
+    display: flex;
+    justify-content: left;
+
+   
+    
+  
+  }
+  .name-contact-info img {
+    width: 30px;
+  
+  }
+  .name-contact-info p{
+    padding-left: 1rem;
+    font-size: 2.26rem;
+    color: #4558BF;
+    font-weight: bold;
+  
+  }
+  
+  
+  
+  .contact-mail {
+    padding-top: 48px;
+  }
+  .contact-mail a {
+   
+    font-size: 1.5rem ;
+    
+  }
+
+  .contact-phone p {
+    font-size: 1.5rem ;
+
+  }
+  
+  .contacts-social  {
+    justify-content: left;
+    gap: 80px;
+  }
+  .contacts-social img {
+    width: 60px;
+    
+  }
+  
+  .name-developer {
+  
+    font-size: 1rem;
+    
+  
+  }
+}
+@media (max-width: 500px) {
+
+  main {
+    width: 100%;
+    margin: auto;
+    padding-top: 86px;
+  }
+  
+
+ 
+  
+ 
+  
+  .menu-nav {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4558bf;
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+
+  
+  .home-bg {
+    background-image: url(img/bgmobile.png);
+    background-position: top right ;
+    background-size: 20rem;
+
+   
+  }
+
+  
+  .home-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    justify-content: center;
+  }
+  
+  .home-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-image: none;
+    height: 130px;
+   
+  }
+  .home-photo {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    
+  
+  }
+  
+  .home-photo img{
+  
+    width: 250px;
+  
+  }
+  
+  
+  h1 {
+    color: #4558bf;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 3rem;
+  }
+  
+  h2 {
+    color: #ABAAAA;
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  
+  .main-bg {
+    background-image: url(img/Bg\ main\ mobile.png);
+    background-size: contain ;
+    background-position:top;
+  }
+  
+  .main-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .main-about {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .name-info {
+    display: flex;
+    margin-bottom:1rem ;
+  }
+  .name-info img {
+    width: 20px;;
+  }
+  
+  h3 {
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    color: #4558BF;
+    
+  }
+  
+  .text-info {
+    padding: 16px;
+
+  }
+  
+  h4 {
+    font-size:1rem ;
+    line-height: 36px;
+    font-weight:500;
+    color: #ABAAAA;
+    
+  }
+  
+  .button-info {
+ 
+  
+    width: 140px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#5D70DB, #18204D );
+    border: 0;
+    margin-top: 48px;
+    cursor: pointer;
+  
+  }
+  
+  .button-info a {
+    color: #ffff;
+    font-size:0.8rem ;
+    font-weight: bold;
+    text-decoration: none;
+  
+  }
+  
+  .button-info img {
+    padding-left: 8px;
+    width: 30px;
+  }
+ 
+  
+  .main-ability-container {
+    padding: 16px ;
+
+  }
+  
+  h5 {
+    font-size: 1rem;
+   
+  }
+  
+  .projects-container {
+    padding: 16px;
+   
+  }
+  .projects-show-img img {
+    border-radius: 5px;
+  }
+  
+  
+  h6 {
+    font-size: 1.5rem;
+    color: #4558BF;
+    text-align: center;
+  
+  }
+  
+  .projects-show-text p {
+    font-size:1rem ;
+    line-height: 30px;
+    font-weight:500;
+    color: #ABAAAA;
+    
+    
+  }
+
+  .button-deploy, .button-git {
+    font-size:0.8rem ;
+    width: 100px;
+    height: 35px;
+    margin-left: 0;
+    
+  }
+  
+
+  
+  .buttonNext {
+
+    padding: 4px;
+    
+  }
+  .buttonPrev {
+ 
+    padding: 4px;
+    
+    
+  }
+  .buttonPrev img, .buttonNext img {
+   padding: 0;
+   width: 14px;
+   
+    
   }
 
 
+  .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width:130px;
+    width: 100%;
+    max-height: 110px;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 30px;
+  }
+
+  .slide img {
+    height: 100%;
+  }
+  
+
+  .invisible{
+    display: none;
+  }
+  
+  
+  .slide-tittle{
+    font-size: 1rem;
+  }
+  
+  .bloco2 {
+    display: none;
+  }
+  
+  
+  .contacts-bg{
+    width: 100%;
+    height: 90vh;
+    background-image: url(img/contacts-bg.png);
+    background-repeat: no-repeat;
+    
+  }
+
+  .contacts-img {
+    justify-content: center;
+  
+  }
+  
+
+  .contacts-img img {
+    width: 200px;
+  
+  }
+  
+  .contacts-container {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+    row-gap: 76px;
+    max-width:320px;
+    width: 80%;
+    
+  }
+
+  .contacts-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: none;
+   
+  }
+
+  .contacts {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    align-items: left;
+
+  }
+
+  .name-contact-info {
+    display: flex;
+    justify-content: left;
+
+  }
+  .name-contact-info img {
+    width: 26px;
+  
+  }
+  .name-contact-info p{
+    padding-left: 1rem;
+    font-size: 1.75rem;
+    color: #4558BF;
+    font-weight: bold;
+  }
+ 
+  .contact-mail {
+    padding-top: 48px;
+  }
+  .contact-mail a {
+   
+    font-size: 1rem ;
+    
+  }
+
+  .contact-phone p {
+    font-size: 1rem ;
+
+  }
+  .contacts-social  {
+    justify-content: left;
+    gap: 60px;
+  }
+  .contacts-social img {
+    width: 40px;
+  }
+  .name-developer {
+    font-size: 0.75rem;
+
+  }
 }
 
 
+@media (min-width: 1920px) {
+  .header-nav,.home-container, .main-container, .contacts-container {
+    max-width: 1289px;
+    width: 100%;
+  }
 
+  .home-bg {
+    background-size:100rem;
+   
+  }
 
+  .contacts-bg{
+    background-size: 105rem;
+    background-position: bottom left;
+    
+  }
+  }

@@ -1,37 +1,48 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-
 }
-
-
-
 body {
   background-color: #000;
+  overflow: auto;
+  transition: 0.5s ;
+  
+ 
 }
 
+body.activeNav {
+  
+  border-left: 6px solid #3f51b5ce;
+  border-right: 7px solid #3f51b5ce;
+  
+ 
+}
+body.mobileMenu{
+  overflow: hidden;
+  border: none;
+}
 main {
   width: 100%;
   margin: auto;
   padding-top: 86px;
 }
-
-
-
 .header-container {
   width: 100%;
   background-color: #151515cb;
   position: fixed;
   backdrop-filter: blur(15px);
-
-
+  transition: 0.5s ;
+  animation: showHeader 0.8s forwards;
 }
-
+.activeNav.header-container {
+  transition: 0.5s ;
+  background-color:#3f51b5ce;
+  z-index: 999999;
+  
+}
 .header-nav  {
   margin: auto;
   width: 70%;
@@ -42,61 +53,107 @@ main {
 .header-nav ul {
   display: flex;
   justify-content: space-between;
-
 }
-
+.header-nav ul span {
+  display: none;
+ 
+}
 .header-nav ul li  {
   list-style: none;
   margin-left: 30px;
 }
+
 
 .header-nav img {
   display: block;
   padding: 10px 0;
 }
 
+.activeNav.header-img {
+  display: none;
+}
 .menu-nav {
   text-decoration: none;
   text-transform: uppercase;
   color: #4558bf;
   font-weight: bold;
   font-size: 1.2rem;
+  
+}
+.activeNav.menu-nav {
+  color: #000000;
+  
 }
 
+@keyframes showHeader {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 .button-top {
   display:none ;
-  color: #4558bf;
-  font-weight: bold;
-  padding: 10px 0;
- 
-  font-size: 1.2px;
 }
 
+#btn-mobile{
+  display: none;
+}
+
+#hamburguer-button {
+  display: none;
+}
+
+.button-top  a{
+  text-decoration: none ;
+  color: #000000;
+}
+.activeNav.button-top {
+  display:flex ;
+  color: #000000;
+  font-weight: bold;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
 .home-bg {
   width: 100%;
   height: 90vh;
-  background-image: url(img/BG\ home\ \(1\).png);
+  background-image: url(img/BG\ home\ .png);
   background-repeat: no-repeat;
   background-position: right ;
   background-size:80rem;
- 
 }
-
 .home {
   width: 100%;
   height: 90vh;
   display: flex;
   align-items: center;
 }
-
 .home-container {
   display: flex;
   align-items: center;
   margin: auto;
   width: 70%;
   justify-content: space-between;
+  animation: showHome 0.8s forwards;
 }
 
+@keyframes showHome {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  }
 .home-name {
   display: flex;
   flex-direction: column;
@@ -110,63 +167,49 @@ main {
   background-size:auto;
 }
 .home-photo {
-
   display: flex;
   align-items: center;
   justify-content: right;
-
-
 }
-
-
 h1 {
   color: #4558bf;
   font-size: 3rem;
   font-weight: bold;
   line-height: 4rem;
 }
-
 h2 {
   color: #ABAAAA;
   font-size: 2.5rem;
   font-weight: 500;
   margin-top: 1rem;
 }
-
 .main-bg {
   width: 100%;
   padding-bottom: 60px;
-  padding-top: 3rem;
-  background-image: url(img/Bg\ main\ \(1\)\ \(1\).png);
+  padding-top: 60px;
+  background-image: url('img/Bg\ main\ .png');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center;
-
-  
+  background-position: right 50% ;
 }
-
 .main-container {
   width: 70%;
   margin: auto;
 }
-
 .main-about {
   width: 100%;
   margin: auto;
+  
 }
-
 .name-info {
   display: flex;
   margin-bottom:1rem ;
 }
-
 h3 {
   padding-left: 1.75rem;
   font-size: 2rem;
   color: #4558BF;
-  
 }
-
 .text-info {
   display: flex;
   flex-direction: column;
@@ -176,23 +219,15 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 36px  48px 48px 48px;
-  
-
-
-
+  margin-bottom: 5rem;
 }
-
 h4 {
   font-size:1.5rem ;
   line-height: 48px;
   font-weight:500;
   color: #ABAAAA;
-  
 }
-
 .button-info {
- 
-  
   width: 208px;
   height: 50px;
   border-radius: 5px;
@@ -203,27 +238,21 @@ h4 {
   border: 0;
   margin-top: 48px;
   cursor: pointer;
-
 }
-
 .button-info a {
   color: #ffff;
   font-size:1.25rem ;
   font-weight: bold;
   text-decoration: none;
-
 }
-
 .button-info img {
   padding-left: 12px;
 }
-
 .main-ability {
-  padding-top: 5rem;
+  
   width: 100%;
   margin: auto;
 }
-
 .main-ability-container {
   display: flex;
   width: 100%;
@@ -232,11 +261,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   padding: 48px ;
-
-
-
 }
-
 h5 {
   color: #ABAAAA;
   font-size: 1.5rem;
@@ -244,37 +269,28 @@ h5 {
   padding-bottom: 12px;
   font-weight: bold;
 }
-
 .ability-info{
   margin: auto;
   max-width: 1180px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  
 }
-
 .projects-info{
   width: 100%;
   margin-top: 100px;
-
 }
-
 .projects-container {
   width: 100%;
   border: 4px solid #4558BF;
   border-radius: 10px;
   padding: 40px  48px 40px 48px;
-
 }
-
 .projetcs-show {
   display: flex;
   width: 100%;
   justify-content: space-between;
-
 }
-
 .projects-show-img {
   display: flex;
   align-items: center;
@@ -282,43 +298,32 @@ h5 {
   width: 100%;
   margin-right: 50px;
 }
-
 .projects-show-img img {
   max-width: 600px;
   width: 100%;
   border-radius: 10px;
 }
-
-
 .projects-show-text{
   max-width: 700px;
   width: 90%;
-
 }
-
 h6 {
   font-size: 2rem;
   color: #4558BF;
   text-align: left;
-
 }
-
 p {
   font-size:1.2rem ;
   line-height: 36px;
   font-weight:500;
   color: #ABAAAA;
-  
 }
-
 .buttons-project {
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top: 32px;
 }
-
-
 .button-deploy, .button-git {
   font-size:1.25rem ;
   width: 142px;
@@ -329,25 +334,18 @@ p {
   color: #ffff;
   font-weight: bold;
   margin-left: 36px;
-  
 }
-
 .division {
   width: 100%;
   height: 2px;
   background-color: #3f3f3f;
   margin: 32px 0;
- 
 }
-
 .projects-carousel {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  
-
 }
-
 .buttonNext {
   background-color: #4558BF;
   display: flex;
@@ -355,7 +353,6 @@ p {
   border-top-right-radius: 10px ;
   border-bottom-right-radius: 10px;
   cursor: pointer;
-  
 }
 .buttonPrev {
   background-color: #4558BF;
@@ -364,25 +361,15 @@ p {
   border-top-left-radius: 10px ;
   border-bottom-left-radius: 10px;
   cursor: pointer;
-  
 }
 .buttonPrev img, .buttonNext img {
  padding: 10px;
- 
-  
 }
-
-
 .visibleHidden {
   display: flex;
   max-width: 965px;
- 
   width: 80%;
-  
- 
-  
 }
-
 .bloco1 {
   display: flex;
   max-width: 965px;
@@ -390,7 +377,6 @@ p {
   justify-content: space-between;
   gap: 30px;
 }
-
 .slide {
   display: flex;
   flex-direction: column;
@@ -404,7 +390,6 @@ p {
 .slide-img{
   max-width: 100%;
   overflow: hidden;
-  
 }
 .slide-img img{
   max-width: 280px;
@@ -414,11 +399,7 @@ p {
   border-right:  4px solid #3F51B5;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-
- 
 }
-
-
 .slide-tittle{
   display: flex;
   align-items: center;
@@ -432,34 +413,24 @@ p {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   letter-spacing: 1px;
-  
- 
-  
 }
-
-
-
 .bloco2 {
   display: none;
 }
-
-
 .contacts-bg{
   width: 100%;
   height: 90vh;
   background-image: url(img/contacts-bg.png);
   background-repeat: no-repeat;
-  
+  background-position: left ;
+  background-size:80rem
 }
-
 .contacts-img {
   display: flex;
   justify-content: left;
   align-items: center;
   width: 50%;
-
 }
-
 .contacts-container {
   display: flex;
   width: 70%;
@@ -467,49 +438,34 @@ p {
   justify-content: space-between;
   align-items: center;
   height: 90vh;
-  
 }
-
 .contatcs-info-container {
   display: flex;
   justify-content: left;
 }
-
 .contacts-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
 }
-
 .contacts {
   display: flex;
   flex-direction: column;
   padding-left: 70px;
-
 }
-
-
 .name-contact-info {
   display: flex;
- 
-  
-
 }
 .name-contact-info img {
   width: 33px;
-
 }
 .name-contact-info p{
   padding-left: 1.75rem;
   font-size: 3rem;
   color: #4558BF;
   font-weight: bold;
-
 }
-
-
-
 .contact-mail {
   display: flex;
   align-items: center;
@@ -533,104 +489,86 @@ p {
   font-size: 1.5rem ;
   font-weight: 600;
 }
-
 .contacts-social {
   display: flex;
   justify-content: space-between;
   padding-top: 48px;
 }
-
 footer {
   display: flex;
   width: 100%;
   height: 80px;
-  background-color: #3F51B5;
+  background-color: #3f51b5ce;
   justify-content: center;
   align-items: center;
 }
 .name-developer {
-
   text-align: center;
   font-size: 1.25rem;
   font-weight: bold;
   color: #000000;
- 
-  
+}
+.js-scroll {
+  opacity: 0;
+  transition: 0.6s;
+  transform: translate3d(0, 80px, 0);
 }
 
-
-
-
+.js-scroll.activeScroll {
+  opacity: 1;
+  transition: 0.6s;
+  transform: translate3d(0, 0, 0);
+}
 @media (max-width: 1500px) {
-
-  
-  
   .menu-nav {
     font-size: 1rem;
   }
-  
   .button-top {
     font-size: 1rem;
   }
-  
   .home-bg {
     height: 90vh;
     background-position: contain ;
     background-size:70rem;
-   
   }
-  
   .home {
     width: 100%;
     height: 90vh;
     display: flex;
     align-items: center;
   }
-  
   .home-name {
-
     background-size:25rem;
   }
   .home-photo img {
-
-
     width: 400px;
-
   }
-  
-  
   h1 {
-    
     font-size: 2.5rem;
-    
   }
-  
   h2 {
-    
     font-size: 2.2rem;
-  
   }
-  
-  
-  
   h3 {
     font-size: 1.5rem; 
-    
   }
-  
-  
+  .main-bg {
+    width: 100%;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    background-image: url('img/Bg\ main\ .png');
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position:  100%  ;
+  }
   h4 {
     font-size:1.5rem ;
     line-height: 48px;
     font-weight: 500;
   }
-  
   .button-info img {
     padding-left: 12px;
   }
-  
-  
-  
   h5 {
     color: #ABAAAA;
     font-size: 1.5rem;
@@ -638,21 +576,14 @@ footer {
     padding-bottom: 12px;
     font-weight: bold;
   }
-  
-
   .ability {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
-
   .ability img {
     width: 80%;
-
   }
-  
-  
   .projects-show-img {
     display: flex;
     align-items: center;
@@ -660,77 +591,46 @@ footer {
     width: 100%;
     margin-right: 50px;
   }
-  
   .projects-show-img img {
     width: 100%;
     border-radius: 10px;
   }
-  
-  
   .projects-show-text{
     max-width: 600px;
     width: 90%;
-  
   }
-  
   h6 {
     font-size: 1.75rem;
     color: #4558BF;
     text-align: left;
-  
   }
-  
   p {
     font-size:1.2rem ;
     line-height: 32px;
     font-weight:500;
     color: #ABAAAA;
-    
   }
-
   .slide-img{
     max-width: 100%;
     overflow: hidden;
     height: 110px;
-  
   }
-  
-  
   .slide-tittle{
     font-size: 1rem;
     height: 48px;
   }
-  
-  
   .contacts-bg{
-    width: 100%;
-    height: 90vh;
-    background-image: url(img/contacts-bg.png);
-    background-repeat: no-repeat;
-    background-size: 72rem;
-    
+    background-size:78rem;
   }
-  
   .contacts-img img {
     width: 400px;
-   
-  
   }
-  
-
   .name-contact-info img {
     width: 30px;
-  
   }
   .name-contact-info p{
-    
     font-size: 2.5rem;
-   
-  
   }
-  
-
-
   .contact-mail a {
     color :#abaaaa;
     text-decoration: none;
@@ -739,7 +639,6 @@ footer {
     font-weight: 600;
     letter-spacing: 1px;
   }
- 
   .contact-phone p {
     color :#abaaaa;
     padding-left: 16px;
@@ -747,156 +646,97 @@ footer {
     font-weight: 600;
     letter-spacing: 1px;
   }
-  
- 
-  
   .contacts-social img{
    width: 50px;
   }
-
-
 }
 @media (max-width: 1250px) {
-
-  
   .home-bg {
     background-size:cover;
     background-position: 7rem;
   }
-  
-
-  
   .home-name {
-
     background-size:20rem;
   }
  .home-photo img {
-
-
     width: 300px;
-
   }
   h1 {
-
     line-height: 3.2rem;
     font-size: 2rem;
-   
   }
-  
   h2 {
     color: #ABAAAA;
     font-size: 1.8rem;
     margin-top: 0px;
   }
-
   .main-bg {
     background-size: 90rem;
     background-position: center;
-  
-    
   }
-  
-  
   h3 {
     font-size: 1.25rem; 
-    
   }
-  
-  
   h4 {
     font-size:1.25rem ;
     line-height: 48px;
     font-weight: 500;
   }
-  
   .button-info img {
     padding-left: 12px;
   }
-
-
-  
-  
-  
   h5 {
     color: #ABAAAA;
     font-size: 1.25rem;
   }
-
   .ability {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
-
   .ability img {
     width: 70%;
-
   }
-
   .projects-container {
     padding: 36px 40px 36px 40px;
 }
-  
-
   .projects-show-img {
     margin-right: 20px;
 }
-  
-  
   .projects-show-text{
     max-width: 700px;
     width: 100%;
-  
   }
-  
   h6 {
     font-size: 1.2rem;
-   
-  
   }
-  
   p {
     font-size:1rem ;
     line-height: 30px;
     font-weight:500;
     color: #ABAAAA;
-    
   }
-
   .buttons-project {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 32px;
   }
-  
-  
   .button-deploy, .button-git {
     font-size:1rem ;
     width: 130px;
     height: 40px;;
-    
   }
-  
-
-  
   .buttonPrev img, .buttonNext img {
    padding: 2px;
    width: 25px;
-   
-    
   }
-  
-  
- 
   .bloco1 {
     display: flex;
     max-width: 965px;
     width: 100%;
     gap: 30px;
   }
-  
   .slide {
     display: flex;
     flex-direction: column;
@@ -908,244 +748,142 @@ footer {
     border-radius: 10px;
     cursor: pointer;
   }
-
   .slide-tittle{
      font-size: 0.8rem;
      height: 50px;
      letter-spacing: 0;
-
   }
   .slide-img{
     max-width: 100%;
-    
   }
   .slide-img img{
     width: 100%;
     height: 100px;
-    
   }
   .contacts-bg{
     background-size: cover;
     background-position: -10rem;
-    
   }
-  
   .contacts-img img {
     width: 300px;
-   
-  
   }
-  
-
   .name-contact-info img {
     width: 32px;
-  
   }
   .name-contact-info p{
     padding-left: 1rem;
-    
     font-size: 2.2rem;
-   
-  
   }
-  
   .contacts {
-   
     padding-left: 50px;
 }
-
   .contact-mail a {
-    
     font-size: 1rem ;
-    
   }
- 
   .contact-phone p {
-    
     font-size: 1rem ;
-    
   }
   .contact-mail img {
     width: 36px;
   }
- 
   .contact-phone img {
   width: 36px;
   }
-  
- 
-  
   .contacts-social img{
    width: 48px;
   }
-
-
-  
-
-
 }
-
-
 @media (max-width: 1000px) {
-
-  .header-nav img {
-    display: block;
-    padding: 10px 0;
-  }
-
-
   .home-photo img {
-
-
     width: 250px;
-
   }
   h1 {
-
-    
     font-size: 1.5rem;
     line-height: 2.5rem;
-   
   }
-  
   h2 {
-
     font-size: 1.3rem;
     margin-top: 0.5rem;
   }
-
-
   .menu-nav {
-  
     font-size: 0.75rem;
   }
-  
   .button-top {
     font-size: 0.75rem;
   }
-
-
   .home-bg {
-
     background-size:cover;
     background-position: 1rem;
-
-    
-   
-   
   }
-
   .home-name {
-
     background-size:15rem;
   }
-  
-
   h3 {
     font-size: 1.25rem; 
-    
   }
-  
-  
   h4 {
     font-size:1.2rem ;
     line-height: 40px;
     font-weight: 500;
-    
   }
-  
   .button-info img {
     padding-left: 12px;
   }
-
-
-  
-  
-  
   h5 {
     color: #ABAAAA;
     font-size: 1rem;
   }
-
   .main-ability-container {
     padding: 32px;
 }
-
   .ability {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
-
   .ability img {
     width: 65%;
-
   }
-
   .projects-container {
     padding: 32px;
 }
-  
-
   .projects-show-img {
     margin-right: 20px;
 }
-  
-  
   .projects-show-text{
     max-width: 700px;
     width: 100%;
-  
   }
-  
   h6 {
     font-size: 1rem;
-   
-  
   }
-  
   p {
     font-size:0.75rem ;
     line-height: 24px;
     font-weight:500;
     color: #ABAAAA;
-    
   }
-
   .buttons-project {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 32px;
   }
-  
-  
   .button-deploy, .button-git {
     font-size:0.75rem ;
     width: 80px;
     height: 32px;;
-    
   }
-  
-
-  
   .buttonPrev img, .buttonNext img {
    padding: 2px;
    width: 20px;
-   
-    
   }
-  
-  
- 
   .bloco1 {
     display: flex;
     max-width: 965px;
     width: 100%;
     gap: 30px;
   }
-  
   .slide {
     display: flex;
     flex-direction: column;
@@ -1157,114 +895,174 @@ footer {
     border-radius: 10px;
     cursor: pointer;
   }
-
   .slide-tittle{
      font-size: 0.5rem;
      height: 50px;
      letter-spacing: 0;
-
   }
   .slide-img{
     max-width: 100%;
-    
   }
   .slide-img img{
     width: 100%;
     height: 100%;
-   
   }
-
-
-
   .contacts-bg{
     background-size: cover;
     background-position: -20rem;
-    
   }
-  
   .contacts-img img {
     width: 250px;
-   
-  
   }
-  
-
   .name-contact-info img {
     width: 24px;
-  
   }
   .name-contact-info p{
-    
     font-size: 2rem;
-   
-  
   }
-  
   .contacts {
-   
     padding-left: 40px;
 }
-
   .contact-mail a {
-    
     font-size: 1rem ;
-    
   }
- 
   .contact-phone p {
-    
     font-size: 1rem ;
-    
   }
   .contact-mail img {
     width: 32px;
   }
- 
   .contact-phone img {
   width: 32px;
   }
-  
- 
-  
   .contacts-social img{
    width: 40px;
   }
-
-
-
 } 
-
 @media (max-width: 800px) {
+
+  .header-img.mobileMenu {
+    visibility: hidden;
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 10px 7px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  #hamburguer-button {
+    color: #3F51B5;
+    display: block;
+    border-top: 4px solid;
+    width: 48px;
+    transition: 0.4s;
+   
+  }
+  #hamburguer-button::after,
+  #hamburguer-button::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 4px;
+    background: currentColor;
+    margin-top: 12px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 99999999;
+  }
+
+  .header-container.mobileMenu {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#5d70dbd2,#18204dc2 );
+    z-index: 9999999999;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+ 
+  }
+
+  .menu-nav {
+  display: none;
+  }
+
+  .header-nav ul {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  .separator.mobileMenu {
+    display: block;
+    width: 40%;
+    height: 2px;
+    position: relative;
+    left: 50%;
+    right:  50%;
+    transform: translate(-50%, -50%);
+    background-color: #4D60CA;
+}
+
+.header-nav ul li  {
+  margin-left: 0px;
+  
+}
+
+
+  .menu-nav.mobileMenu {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #E4E4E4;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 32px;
+    z-index: 9999999;
+    
+  }
+  .menu-nav.mobileMenu:hover {
+    transition: all 0.4s ease;
+   background-color: #5d70db69;
+    
+  }
+
+ 
+
+  .mobileMenu #hamburguer-button {
+    border-top: transparent;
+  }
+
+  .mobileMenu #hamburguer-button::before {
+    color: #000;
+    transform: rotate(135deg);
+  }
+
+  .mobileMenu #hamburguer-button::after {
+    color: #000;
+    transform: rotate(-135deg);
+    top: -15px;
+  }
 
   main {
     width: 100%;
     margin: auto;
     padding-top: 86px;
   }
-  
 
  
-  
- 
-  
-  .menu-nav {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #4558bf;
-    font-weight: bold;
-    font-size: 0.75rem;
-  }
-
-  
   .home-bg {
     background-image: url(img/bgmobile.png);
     background-position: top right ;
     background-size: 30rem;
-
-   
   }
-
-  
   .home-container {
     display: flex;
     flex-direction: column-reverse;
@@ -1273,7 +1071,6 @@ footer {
     width: 80%;
     justify-content: center;
   }
-  
   .home-name {
     display: flex;
     flex-direction: column;
@@ -1282,54 +1079,36 @@ footer {
     width: 100%;
     background-image: none;
     height: 130px;
-   
   }
   .home-photo {
-  
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 120px;
-    
-  
   }
-  
   .home-photo img{
-  
     width: 300px;
-  
   }
-  
-  
   h1 {
     color: #4558bf;
     font-size: 1.8rem;
     font-weight: bold;
     line-height: 3rem;
   }
-  
   h2 {
     color: #ABAAAA;
     font-size: 1.6rem;
     margin-top: 0;
   }
-  
-  .main-bg {
-    background-image: url(img/Bg\ main\ mobile.png);
-    background-size: cover;
-  
-  }
-  
+ 
   .main-container {
     width: 80%;
     margin: auto;
   }
-  
   .main-about {
     width: 100%;
     margin: auto;
   }
-  
   .name-info {
     display: flex;
     margin-bottom:1rem ;
@@ -1337,47 +1116,34 @@ footer {
   .name-info img {
     width: 22px;;
   }
-  
   h3 {
     padding-left: 0.75rem;
     font-size: 1.25rem;
     color: #4558BF;
-    
   }
-  
   .text-info {
     padding: 32px;
-
   }
-  
   h4 {
     font-size:1.5rem ;
     line-height: 40px;
     font-weight:500;
     color: #ABAAAA;
-    
   }
-  
-
-  
   .button-info a {
     color: #ffff;
     font-size:1.25rem ;
     font-weight: bold;
     text-decoration: none;
-  
   }
-  
   .button-info img {
     padding-left: 12px;
   }
-  
   .main-ability {
     padding-top: 5rem;
     width: 100%;
     margin: auto;
   }
-  
   .main-ability-container {
     display: flex;
     width: 100%;
@@ -1386,15 +1152,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 32px ;
-
   }
-  
   h5 {
     font-size: 1rem;
     padding-bottom: 8px;
-   
   }
-  
   .ability-info{
     margin: auto;
     max-width: 1180px;
@@ -1404,66 +1166,43 @@ footer {
     gap: 30px;
     justify-content: center;
     row-gap: 20px;
-    
   }
-  
-
-
-
-
   .ability {
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
-
   .ability img {
     width: 100%;
     height: 100px;
-
   }
-  
   .projects-info{
     width: 100%;
     margin-top: 100px;
-  
   }
-  
   .projects-container {
     padding: 32px;
-   
-  
   }
-  
   .projetcs-show {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
-   
-  
   }
-  
   .projects-show-img {
     display: flex;
     max-width: 600px;
     width: 100%;
     margin-right: 0;
     margin-bottom: 22px;
-   
   }
-  
   .projects-show-img img {
     display: flex;
     width: 100%;
     border-radius: 10px;
   }
-  
-  
   .projects-show-text{
     display: flex;
     flex-direction: column;
@@ -1471,26 +1210,19 @@ footer {
     align-items: center;
     max-width: 700px;
     width: 90%;
-  
   }
-  
   h6 {
     font-size: 1.5rem;
     color: #4558BF;
     text-align: center;
-  
   }
-  
   .projects-show-text p {
     font-size:1.35rem ;
     line-height: 36px;
     font-weight:500;
     color: #ABAAAA;
     display: none;
-    
-    
   }
-  
   .buttons-project {
     display: flex;
     justify-content: center;
@@ -1498,65 +1230,40 @@ footer {
     margin-top: 32px;
     gap: 32px;
   }
-  
-  
   .button-deploy, .button-git {
     font-size:1rem ;
     width: 130px;
     height: 40px;
     margin-left: 0;
-    
   }
-  
   .division {
-  
     background-color: transparent;
-   
-   
   }
-  
   .projects-carousel {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    
-  
   }
-  
   .buttonNext {
-
     padding: 5px;
-    
   }
   .buttonPrev {
- 
     padding: 5px;
-    
-    
   }
   .buttonPrev img, .buttonNext img {
    padding: 0;
-   
-    
   }
-  
-  
   .visibleHidden {
     display: flex;
     max-width: 500px;
     width: 80%;
-    
-   
-    
   }
-  
   .bloco1 {
     display: flex;
     max-width: 965px;
     width: 100%;
     justify-content: center;
   }
-  
   .slide {
     display: flex;
     flex-direction: column;
@@ -1572,59 +1279,31 @@ footer {
   .slide-img{
     max-width: 100%;
     overflow: hidden;
-    
   }
   .slide-img img{
-    
     width: 100%;
-
-  
-   
   }
-
   .invisible{
     display: none;
   }
-  
-  
   .slide-tittle{
     font-size: 1.5rem;
-    
-   
-   
-    
-    
   }
-  
-  
-  
   .bloco2 {
     display: none;
   }
-  
-  
   .contacts-bg{
     background-image: url(img/bgcontatcmobile.png);
     background-repeat: no-repeat;
     background-position: top left ;
     background-size: 30rem;
-
-    
   }
-
   .contacts-img {
-   
     justify-content: center;
-    
-  
   }
-  
-
   .contacts-img img {
     width: 264px;
-  
   }
-  
   .contacts-container {
     margin: auto;
     justify-content: center;
@@ -1634,93 +1313,59 @@ footer {
     row-gap: 76px;
     max-width: 570px;
     width: 70%;
-    
   }
-  
   .contacts-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: none;
-   
   }
-  
   .contacts {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding-left: 0;
     align-items: left;
-   
-  
   }
-  
-  
   .name-contact-info {
     display: flex;
     justify-content: left;
-
-   
-    
-  
   }
   .name-contact-info img {
     width: 30px;
-  
   }
   .name-contact-info p{
     padding-left: 1rem;
     font-size: 2.26rem;
     color: #4558BF;
     font-weight: bold;
-  
   }
-  
-  
-  
   .contact-mail {
     padding-top: 48px;
   }
   .contact-mail a {
-   
     font-size: 1.5rem ;
-    
   }
-
   .contact-phone p {
     font-size: 1.5rem ;
-
   }
-  
   .contacts-social  {
     justify-content: left;
     gap: 80px;
   }
   .contacts-social img {
     width: 60px;
-    
   }
-  
   .name-developer {
-  
     font-size: 1rem;
-    
-  
   }
 }
 @media (max-width: 500px) {
-
   main {
     width: 100%;
     margin: auto;
     padding-top: 86px;
   }
-  
-
- 
-  
- 
-  
   .menu-nav {
     text-decoration: none;
     text-transform: uppercase;
@@ -1728,17 +1373,11 @@ footer {
     font-weight: bold;
     font-size: 0.75rem;
   }
-
-  
   .home-bg {
     background-image: url(img/bgmobile.png);
     background-position: top right ;
     background-size: 20rem;
-
-   
   }
-
-  
   .home-container {
     display: flex;
     flex-direction: column-reverse;
@@ -1747,7 +1386,6 @@ footer {
     width: 80%;
     justify-content: center;
   }
-  
   .home-name {
     display: flex;
     flex-direction: column;
@@ -1756,54 +1394,36 @@ footer {
     width: 100%;
     background-image: none;
     height: 130px;
-   
   }
   .home-photo {
-  
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 100px;
-    
-  
   }
-  
   .home-photo img{
-  
     width: 250px;
-  
   }
-  
-  
   h1 {
     color: #4558bf;
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 3rem;
   }
-  
   h2 {
     color: #ABAAAA;
     font-size: 1.2rem;
     margin-top: 0;
   }
-  
-  .main-bg {
-    background-image: url(img/Bg\ main\ mobile.png);
-    background-size: contain ;
-    background-position:top;
-  }
-  
+
   .main-container {
     width: 80%;
     margin: auto;
   }
-  
   .main-about {
     width: 100%;
     margin: auto;
   }
-  
   .name-info {
     display: flex;
     margin-bottom:1rem ;
@@ -1811,30 +1431,21 @@ footer {
   .name-info img {
     width: 20px;;
   }
-  
   h3 {
     padding-left: 0.75rem;
     font-size: 1rem;
     color: #4558BF;
-    
   }
-  
   .text-info {
     padding: 16px;
-
   }
-  
   h4 {
     font-size:1rem ;
     line-height: 36px;
     font-weight:500;
     color: #ABAAAA;
-    
   }
-  
   .button-info {
- 
-  
     width: 140px;
     height: 44px;
     border-radius: 5px;
@@ -1845,87 +1456,56 @@ footer {
     border: 0;
     margin-top: 48px;
     cursor: pointer;
-  
   }
-  
   .button-info a {
     color: #ffff;
     font-size:0.8rem ;
     font-weight: bold;
     text-decoration: none;
-  
   }
-  
   .button-info img {
     padding-left: 8px;
     width: 30px;
   }
- 
-  
   .main-ability-container {
     padding: 16px ;
-
   }
-  
   h5 {
     font-size: 1rem;
-   
   }
-  
   .projects-container {
     padding: 16px;
-   
   }
   .projects-show-img img {
     border-radius: 5px;
   }
-  
-  
   h6 {
     font-size: 1.5rem;
     color: #4558BF;
     text-align: center;
-  
   }
-  
   .projects-show-text p {
     font-size:1rem ;
     line-height: 30px;
     font-weight:500;
     color: #ABAAAA;
-    
-    
   }
-
   .button-deploy, .button-git {
     font-size:0.8rem ;
     width: 100px;
     height: 35px;
     margin-left: 0;
-    
   }
-  
-
-  
   .buttonNext {
-
     padding: 4px;
-    
   }
   .buttonPrev {
- 
     padding: 4px;
-    
-    
   }
   .buttonPrev img, .buttonNext img {
    padding: 0;
    width: 14px;
-   
-    
   }
-
-
   .slide {
     display: flex;
     flex-direction: column;
@@ -1938,45 +1518,30 @@ footer {
     cursor: pointer;
     margin: 0 30px;
   }
-
   .slide img {
     height: 100%;
   }
-  
-
   .invisible{
     display: none;
   }
-  
-  
   .slide-tittle{
     font-size: 1rem;
   }
-  
   .bloco2 {
     display: none;
   }
-  
-  
   .contacts-bg{
     width: 100%;
     height: 90vh;
     background-image: url(img/contacts-bg.png);
     background-repeat: no-repeat;
-    
   }
-
   .contacts-img {
     justify-content: center;
-  
   }
-  
-
   .contacts-img img {
     width: 200px;
-  
   }
-  
   .contacts-container {
     margin: auto;
     justify-content: center;
@@ -1986,34 +1551,26 @@ footer {
     row-gap: 76px;
     max-width:320px;
     width: 80%;
-    
   }
-
   .contacts-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: none;
-   
   }
-
   .contacts {
     width: 80%;
     display: flex;
     flex-direction: column;
     padding-left: 0;
     align-items: left;
-
   }
-
   .name-contact-info {
     display: flex;
     justify-content: left;
-
   }
   .name-contact-info img {
     width: 26px;
-  
   }
   .name-contact-info p{
     padding-left: 1rem;
@@ -2021,19 +1578,14 @@ footer {
     color: #4558BF;
     font-weight: bold;
   }
- 
   .contact-mail {
     padding-top: 48px;
   }
   .contact-mail a {
-   
     font-size: 1rem ;
-    
   }
-
   .contact-phone p {
     font-size: 1rem ;
-
   }
   .contacts-social  {
     justify-content: left;
@@ -2044,25 +1596,18 @@ footer {
   }
   .name-developer {
     font-size: 0.75rem;
-
   }
 }
-
-
 @media (min-width: 1920px) {
   .header-nav,.home-container, .main-container, .contacts-container {
     max-width: 1289px;
     width: 100%;
   }
-
   .home-bg {
     background-size:100rem;
-   
   }
-
   .contacts-bg{
     background-size: 105rem;
     background-position: bottom left;
-    
   }
   }

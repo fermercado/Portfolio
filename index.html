@@ -6,26 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon" />
-    <title>Fer Mercado - Portifólio</title>
+    <title>Fernando Mercado</title>
   </head>
   <body>
     <header>
-      <div class="header-container">
-        <div class="header-nav invisible">
-          <img src="img/logo.svg" alt="" />
-          <span class="button-top">INICIO</span>
-          <ul>
-            <li><a class="menu-nav" href="">Sobre mim</a></li>
-            <li><a class="menu-nav" href="">Habilidades</a></li>
-            <li><a class="menu-nav" href="">Projetos</a></li>
-            <li><a class="menu-nav" href="">Contatos</a></li>
+      <div id="menu" class="header-container">
+        <nav  class="header-nav">
+          <img class="header-img" src="img/logo.svg" alt="" />
+          <div id="init" class="button-top"><a href="#init">INICIO</a> </div>
+          
+          <ul >
+            <span class="separator"></span>
+            <li><a class="menu-nav" href="#about">Sobre mim</a></li>
+            <span class="separator"></span>
+            <li><a class="menu-nav" href="#abilityScroll">Habilidades</a></li>
+            <span class="separator"></span>
+            <li><a class="menu-nav" href="#projectsScroll">Projetos</a></li>
+            <span class="separator"></span>
+            <li><a class="menu-nav" href="#contactScroll">Contatos</a></li>
+            <span class="separator"></span>
           </ul>
-        </div>
+          <button id="btn-mobile" aria-expanded="false">
+            <span id="hamburguer-button"></span>
+        </button>
+        </nav>
       </div>
     </header>
     <main>
       <section class="home-bg">
-        <div class="home">
+        <div  class="home">
           <div class="home-container">
             <div class="home-name">
               <h1>
@@ -42,7 +51,7 @@
       </section>
       <section class="main-bg">
         <div class="main-container">
-          <div class="main-about">
+          <div id="about" class="main-about js-scroll">
             <div class="name-info">
               <img src="img/seta.svg" alt="" />
               <h3>SOBRE MIM</h3>
@@ -65,7 +74,7 @@
               </button>
             </div>
           </div>
-          <div class="main-ability">
+          <div id="abilityScroll"class="main-ability js-scroll">
             <div class="name-info">
               <img src="img/seta.svg" alt="" />
               <h3>HABILIDADES</h3>
@@ -96,7 +105,7 @@
             </div>
           </div>
 
-          <div class="projects-info">
+          <div id="projectsScroll" class="projects-info js-scroll">
             <div class="name-info">
               <img src="img/seta.svg" alt="" />
               <h3>PROJETOS</h3>
@@ -178,7 +187,7 @@
         </div>
       </section>
       <section class="contacts-bg">
-        <div class="contacts-container">
+        <div id="contactScroll" class="contacts-container js-scroll">
           <div class="contacts-img">
             <img src="img/contacts-img.png" alt="" />
           </div>
@@ -223,5 +232,6 @@
         todos direitos reservados - 2022
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

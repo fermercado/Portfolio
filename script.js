@@ -4,6 +4,7 @@ const headerImg = document.querySelector('.header-img')
 const buttonTop = document.querySelector('.button-top')
 const bodyBorder = document.querySelector('body')
 const menuNav = document.querySelectorAll('.menu-nav')
+const buttonHamburguer = document.querySelector('#hamburguer-button')
 const animationScrollNav = 'activeNav'
 
 
@@ -15,6 +16,8 @@ const animationScrollNav = 'activeNav'
     buttonTop.classList.add(animationScrollNav)
     headerImg.classList.add(animationScrollNav)
     headerCont.classList.add(animationScrollNav)
+    buttonHamburguer.classList.add(animationScrollNav)
+
     menuNav.forEach((menu)=> {
       menu.classList.add(animationScrollNav)
     })
@@ -27,6 +30,7 @@ const animationScrollNav = 'activeNav'
   buttonTop.classList.remove(animationScrollNav)
   headerImg.classList.remove(animationScrollNav)
   headerCont.classList.remove(animationScrollNav)
+  buttonHamburguer.classList.remove(animationScrollNav)
   menuNav.forEach((menu)=> {
     menu.classList.remove(animationScrollNav)
   })
@@ -70,7 +74,7 @@ function scrollClick(event) {
   const section = document.querySelector(id).offsetTop;
 
   window.scroll({
-    top: section - 60,
+    top: section - 80,
     behavior: 'smooth'
   })
 
@@ -84,10 +88,12 @@ function buttonHamburguer () {
     const menu = document.querySelector('.header-container')
     const body = document.querySelector('body')
     const headerImg = document.querySelector('.header-img')
+    const buttonTop = document.querySelector('.button-top')
     const menuNav = document.querySelectorAll('.menu-nav')
     const separator = document.querySelectorAll('.separator')
 
     menu.classList.toggle('mobileMenu')
+    buttonTop.classList.toggle('mobileMenu')
     body.classList.toggle('mobileMenu')
     headerImg.classList.toggle('mobileMenu')
     menuNav.forEach((menu)=> {
@@ -101,6 +107,28 @@ function buttonHamburguer () {
 }
 
 buttonHamburguer()
+
+
+ 
+  function clickClose () {
+    const clickButton = document.querySelectorAll('.header-nav a')
+clickButton.forEach(item => {
+  item.addEventListener('click', function () {
+    const bla = document.querySelectorAll('.mobileMenu')
+    bla.forEach(item => {
+      item.classList.remove('mobileMenu')
+    })
+
+  })
+  
+})
+    
+
+  }
+
+ clickClose()
+  
+
 
 
 

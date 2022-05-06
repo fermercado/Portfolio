@@ -519,6 +519,20 @@ footer {
   transition: 0.6s;
   transform: translate3d(0, 0, 0);
 }
+
+@media (min-width: 1920px) {
+  .header-nav,.home-container, .main-container, .contacts-container {
+    max-width: 1289px;
+    width: 100%;
+  }
+  .home-bg {
+    background-size:100rem;
+  }
+  .contacts-bg{
+    background-size: 105rem;
+    background-position: bottom left;
+  }
+  }
 @media (max-width: 1500px) {
   .menu-nav {
     font-size: 1rem;
@@ -947,7 +961,7 @@ footer {
 
   #btn-mobile {
     display: flex;
-    padding: 10px 7px;
+    padding: 15px 0px ;
     border: none;
     background: none;
     cursor: pointer;
@@ -959,6 +973,9 @@ footer {
     width: 48px;
     transition: 0.4s;
    
+  }
+  #hamburguer-button.activeNav {
+    color: #000000;
   }
   #hamburguer-button::after,
   #hamburguer-button::before {
@@ -977,10 +994,14 @@ footer {
     width: 100%;
     height: 100vh;
     background: linear-gradient(#5d70dbd2,#18204dc2 );
-    z-index: 9999999999;
+    z-index: 99999999999;
     backdrop-filter: blur(15px);
     overflow: hidden;
+    padding-right: 10px;
  
+  }
+  .button-top.mobileMenu {
+    visibility: hidden;
   }
 
   .menu-nav {
@@ -1000,7 +1021,7 @@ footer {
 }
   .separator.mobileMenu {
     display: block;
-    width: 40%;
+    width: 300px;
     height: 2px;
     position: relative;
     left: 50%;
@@ -1018,10 +1039,7 @@ footer {
   .menu-nav.mobileMenu {
     display: flex;
     flex-direction: column;
-    text-decoration: none;
-    text-transform: uppercase;
     color: #E4E4E4;
-    font-weight: bold;
     position: relative;
     font-size: 1.5rem;
     padding: 32px;
@@ -1140,7 +1158,6 @@ footer {
     padding-left: 12px;
   }
   .main-ability {
-    padding-top: 5rem;
     width: 100%;
     margin: auto;
   }
@@ -1373,6 +1390,18 @@ footer {
     font-weight: bold;
     font-size: 0.75rem;
   }
+
+  .separator.mobileMenu {
+    
+    width: 220px;
+   
+}
+  .menu-nav.mobileMenu {
+  
+    font-size: 1rem;
+   
+    
+  }
   .home-bg {
     background-image: url(img/bgmobile.png);
     background-position: top right ;
@@ -1383,7 +1412,7 @@ footer {
     flex-direction: column-reverse;
     align-items: center;
     margin: auto;
-    width: 80%;
+    width: 90%;
     justify-content: center;
   }
   .home-name {
@@ -1399,7 +1428,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
   .home-photo img{
     width: 250px;
@@ -1417,7 +1446,7 @@ footer {
   }
 
   .main-container {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
   .main-about {
@@ -1531,10 +1560,8 @@ footer {
     display: none;
   }
   .contacts-bg{
-    width: 100%;
-    height: 90vh;
-    background-image: url(img/contacts-bg.png);
-    background-repeat: no-repeat;
+    background-position: top left ;
+    background-size: 20rem;
   }
   .contacts-img {
     justify-content: center;
@@ -1550,7 +1577,7 @@ footer {
     flex-direction: column;
     row-gap: 76px;
     max-width:320px;
-    width: 80%;
+    width: 90%;
   }
   .contacts-info {
     display: flex;
@@ -1598,16 +1625,3 @@ footer {
     font-size: 0.75rem;
   }
 }
-@media (min-width: 1920px) {
-  .header-nav,.home-container, .main-container, .contacts-container {
-    max-width: 1289px;
-    width: 100%;
-  }
-  .home-bg {
-    background-size:100rem;
-  }
-  .contacts-bg{
-    background-size: 105rem;
-    background-position: bottom left;
-  }
-  }

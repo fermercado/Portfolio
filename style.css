@@ -1412,8 +1412,12 @@ footer {
     flex-direction: column-reverse;
     align-items: center;
     margin: auto;
-    width: 90%;
     justify-content: center;
+  }
+  .header-nav  {
+    
+    width: 80%;
+ 
   }
   .home-name {
     display: flex;

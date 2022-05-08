@@ -96,6 +96,8 @@ main {
     transform: translate3d(0, 0, 0);
   }
 }
+
+
 .button-top {
   display:none ;
 }
@@ -370,8 +372,8 @@ p {
   max-width: 965px;
   width: 80%;
 }
-.bloco1 {
-  display: flex;
+.bloco1, .bloco2{
+  display: none;
   max-width: 965px;
   width: 100%;
   justify-content: space-between;
@@ -414,8 +416,41 @@ p {
   border-bottom-left-radius: 10px;
   letter-spacing: 1px;
 }
-.bloco2 {
-  display: none;
+.entrada {
+  animation: showHeader 0.8s forwards;
+}
+
+
+@keyframes showHeader {
+  from {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.saida {
+  animation: saida 0.8s forwards;
+}
+
+
+@keyframes saida {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.visible {
+  display: flex;
 }
 .contacts-bg{
   width: 100%;
@@ -745,12 +780,7 @@ footer {
    padding: 2px;
    width: 25px;
   }
-  .bloco1 {
-    display: flex;
-    max-width: 965px;
-    width: 100%;
-    gap: 30px;
-  }
+
   .slide {
     display: flex;
     flex-direction: column;
@@ -892,19 +922,17 @@ footer {
    padding: 2px;
    width: 20px;
   }
-  .bloco1 {
-    display: flex;
-    max-width: 965px;
-    width: 100%;
-    gap: 30px;
+  .bloco1, .bloco2{
+    gap: 20px;
   }
+
   .slide {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-width: 220px;
     width: 100%;
-    max-height: 120px;
+    max-height: 100px;
     height: 100%;
     border-radius: 10px;
     cursor: pointer;
@@ -1086,9 +1114,13 @@ footer {
     flex-direction: column-reverse;
     align-items: center;
     margin: auto;
-    width: 80%;
     justify-content: center;
   }
+
+  .header-nav {
+    width: 80%;
+  }
+
   .home-name {
     display: flex;
     flex-direction: column;
@@ -1275,12 +1307,11 @@ footer {
     max-width: 500px;
     width: 80%;
   }
-  .bloco1 {
-    display: flex;
-    max-width: 965px;
-    width: 100%;
+  .bloco1, .bloco2{
     justify-content: center;
+   
   }
+ 
   .slide {
     display: flex;
     flex-direction: column;
@@ -1292,6 +1323,7 @@ footer {
     border-radius: 10px;
     cursor: pointer;
     margin: 0 30px;
+    display: none;
   }
   .slide-img{
     max-width: 100%;
@@ -1306,9 +1338,11 @@ footer {
   .slide-tittle{
     font-size: 1.5rem;
   }
-  .bloco2 {
-    display: none;
+
+  .visibleMobile {
+    display: flex;
   }
+
   .contacts-bg{
     background-image: url(img/bgcontatcmobile.png);
     background-repeat: no-repeat;
@@ -1329,7 +1363,7 @@ footer {
     flex-direction: column;
     row-gap: 76px;
     max-width: 570px;
-    width: 70%;
+    width: 80%;
   }
   .contacts-info {
     display: flex;
@@ -1408,15 +1442,17 @@ footer {
     background-size: 20rem;
   }
   .home-container {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
+    padding: 0;
+ 
   }
   .header-nav  {
     
-    width: 80%;
+    width: 90%;
+ 
+  }
+  .header-nav img {
+    
+    width: 45px
  
   }
   .home-name {

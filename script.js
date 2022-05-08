@@ -128,6 +128,94 @@ clickButton.forEach(item => {
 
  clickClose()
   
+function slideProjectsDesktop () {
+  const slides = document.querySelectorAll('[data-js="carousel"]')
+  const nextButton = document.querySelector('[data-js="button-next-item"]')
+  const prevButton = document.querySelector('[data-js="button-prev-item"]')
+  
+  let currentSlidesIndex = 0
+  
+  nextButton.addEventListener('click', () => {
+    if (currentSlidesIndex === slides.length - 1) {
+      currentSlidesIndex = 0
+    } else {
+      currentSlidesIndex++
+    }
+  
+    slides.forEach(slide => {
+      slide.classList.remove('visible')
+      
+    })
+  
+    slides[currentSlidesIndex].classList.add('visible')
+    slides[currentSlidesIndex].classList.add('entrada')
+    slides[currentSlidesIndex].classList.remove('saida')
+  })
+  prevButton.addEventListener('click', () => {
+    if (currentSlidesIndex === 0) {
+      currentSlidesIndex = slides.length - 1
+    } else {
+      currentSlidesIndex--
+    }
+  
+    slides.forEach(slide => {
+      slide.classList.remove('visible')
+      
+    })
+  
+    slides[currentSlidesIndex].classList.add('visible')
+    slides[currentSlidesIndex].classList.add('saida')
+    slides[currentSlidesIndex].classList.remove('entrada')
+  })
+
+}
+
+slideProjectsDesktop()
+
+// function slideProjectsMobile () {
+//   const slides = document.querySelectorAll('[data-js="slide"]')
+//   const nextButton2 = document.querySelector('[data-js="button-next-item"]')
+//   const prevButton2 = document.querySelector('[data-js="button-prev-item"]')
+  
+//   let currentSlidesIndex = 0
+  
+//   nextButton2.addEventListener('click', () => {
+//     if (currentSlidesIndex === slides.length - 1) {
+//       currentSlidesIndex = 0
+//     } else {
+//       currentSlidesIndex++
+//     }
+  
+//     slides.forEach(slide => {
+//       slide.classList.remove('visibleMobile')
+      
+//     })
+  
+//     slides[currentSlidesIndex].classList.add('visibleMobile')
+//     slides[currentSlidesIndex].classList.add('entrada')
+//     slides[currentSlidesIndex].classList.remove('saida')
+//   })
+//   prevButton2.addEventListener('click', () => {
+//     if (currentSlidesIndex === 0) {
+//       currentSlidesIndex = slides.length - 1
+//     } else {
+//       currentSlidesIndex--
+//     }
+  
+//     slides.forEach(slide => {
+//       slide.classList.remove('visibleMobile')
+      
+//     })
+  
+//     slides[currentSlidesIndex].classList.add('visibleMobile')
+//     slides[currentSlidesIndex].classList.add('saida')
+//     slides[currentSlidesIndex].classList.remove('entrada')
+//   })
+
+// }
+
+// slideProjectsMobile()
+
 
 
 

@@ -41,7 +41,7 @@ function initAnimationScroll() {
   const sections = document.querySelectorAll('.js-scroll')
 
   if (sections.length) {
-    const windowMetade = window.innerHeight * 0.7
+    const windowMetade = window.innerHeight * 0.85
       sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top
         const isSectionVisible = sectionTop - windowMetade < 0
@@ -127,96 +127,97 @@ clickButton.forEach(item => {
   }
 
  clickClose()
-  
-function slideProjectsDesktop () {
-  const slides = document.querySelectorAll('[data-js="carousel"]')
-  const nextButton = document.querySelector('[data-js="button-next-item"]')
-  const prevButton = document.querySelector('[data-js="button-prev-item"]')
-  
-  let currentSlidesIndex = 0
-  
-  nextButton.addEventListener('click', () => {
-    if (currentSlidesIndex === slides.length - 1) {
-      currentSlidesIndex = 0
-    } else {
-      currentSlidesIndex++
+
+ 
+    function slideButton () {
+      const vai = document.querySelector('.buttonNext')
+      vai.addEventListener('click', () =>{
+         const slide = document.querySelector('.visibleHidden')
+     
+         slide.scrollBy(50,0)
+        
+        
+      })
+      const volta = document.querySelector('.buttonPrev')
+      volta.addEventListener('click', () =>{
+         const slide = document.querySelector('.visibleHidden')
+        
+     
+         slide.scrollBy(-1,0)
+     
+       
+      })
+     
+     
+
     }
+    slideButton()
+
+
+
+
+    function carouselProjects () {
+      projectJson.forEach((item) => {
+       
+        let projectItem = document
+          .querySelector('.slide')
+          .cloneNode(true)
+    
+          projectItem.querySelector('.img-slide img').src = item.img
+          projectItem.querySelector('.tittle-slide').innerHTML = item.tittle
   
-    slides.forEach(slide => {
-      slide.classList.remove('visible')
-      
-    })
   
-    slides[currentSlidesIndex].classList.add('visible')
-    slides[currentSlidesIndex].classList.add('entrada')
-    slides[currentSlidesIndex].classList.remove('saida')
-  })
-  prevButton.addEventListener('click', () => {
-    if (currentSlidesIndex === 0) {
-      currentSlidesIndex = slides.length - 1
-    } else {
-      currentSlidesIndex--
+        document.querySelector('.visibleHidden').append(projectItem)
+        
+      })
+  
+  
+     }
+  
+     carouselProjects()
+  
+     function contentProjects () {
+      projectJson.forEach((item) => {
+        let projectShow = document
+        .querySelector('.projetcs-show')
+        .cloneNode(true)
+  
+        projectShow.querySelector('.projects-show-img img').src = item.img
+        projectShow.querySelector('.projects-show-text h6').innerHTML = item.tittle
+        projectShow.querySelector('.projects-show-text p').innerHTML = item.description
+        projectShow.querySelector('.button-deploy a').href = item.deploy
+        projectShow.querySelector('.button-git a').href = item.github
+        
+       
+         
+       document.querySelector('.projects-show-container').append(projectShow)
+        
+        
+      })
+  
+     }
+     contentProjects()
+
+     function initTabNav() {
+      const tabMenu = document.querySelectorAll('.slide')
+      const tabContent = document.querySelectorAll('.projetcs-show')
+    
+      if (tabMenu.length && tabContent.length) {
+        tabContent[1].classList.add('active-content')
+    
+        function activeTab(index) {
+          tabContent.forEach(section => {
+            section.classList.remove('active-content')
+          })
+          tabContent[index].classList.add('active-content')
+        }
+    
+        tabMenu.forEach((itemMenu, index) => {
+          itemMenu.addEventListener('click', () => {
+            activeTab(index)
+          })
+        })
+      }
     }
-  
-    slides.forEach(slide => {
-      slide.classList.remove('visible')
-      
-    })
-  
-    slides[currentSlidesIndex].classList.add('visible')
-    slides[currentSlidesIndex].classList.add('saida')
-    slides[currentSlidesIndex].classList.remove('entrada')
-  })
-
-}
-
-slideProjectsDesktop()
-
-// function slideProjectsMobile () {
-//   const slides = document.querySelectorAll('[data-js="slide"]')
-//   const nextButton2 = document.querySelector('[data-js="button-next-item"]')
-//   const prevButton2 = document.querySelector('[data-js="button-prev-item"]')
-  
-//   let currentSlidesIndex = 0
-  
-//   nextButton2.addEventListener('click', () => {
-//     if (currentSlidesIndex === slides.length - 1) {
-//       currentSlidesIndex = 0
-//     } else {
-//       currentSlidesIndex++
-//     }
-  
-//     slides.forEach(slide => {
-//       slide.classList.remove('visibleMobile')
-      
-//     })
-  
-//     slides[currentSlidesIndex].classList.add('visibleMobile')
-//     slides[currentSlidesIndex].classList.add('entrada')
-//     slides[currentSlidesIndex].classList.remove('saida')
-//   })
-//   prevButton2.addEventListener('click', () => {
-//     if (currentSlidesIndex === 0) {
-//       currentSlidesIndex = slides.length - 1
-//     } else {
-//       currentSlidesIndex--
-//     }
-  
-//     slides.forEach(slide => {
-//       slide.classList.remove('visibleMobile')
-      
-//     })
-  
-//     slides[currentSlidesIndex].classList.add('visibleMobile')
-//     slides[currentSlidesIndex].classList.add('saida')
-//     slides[currentSlidesIndex].classList.remove('entrada')
-//   })
-
-// }
-
-// slideProjectsMobile()
-
-
-
-
+    initTabNav()
 

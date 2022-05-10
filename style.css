@@ -282,16 +282,27 @@ h5 {
   width: 100%;
   margin-top: 100px;
 }
+
 .projects-container {
   width: 100%;
   border: 4px solid #4558BF;
   border-radius: 10px;
   padding: 40px  48px 40px 48px;
+ 
 }
+
+
+
 .projetcs-show {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
+  display: none;
+}
+.project-info-container {
+  display: flex;
+  
 }
 .projects-show-img {
   display: flex;
@@ -309,6 +320,7 @@ h5 {
   max-width: 700px;
   width: 90%;
 }
+
 h6 {
   font-size: 2rem;
   color: #4558BF;
@@ -324,28 +336,36 @@ p {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 32px;
+  margin: 32px 0 48px 0;
 }
 .button-deploy, .button-git {
-  font-size:1.25rem ;
   width: 142px;
   height: 48px;
   border-radius: 5px;
   background: linear-gradient(#5D70DB, #18204D );
   border: 0;
+  margin-left: 36px;
+  
+}
+.button-deploy a, .button-git a {
+  text-decoration: none;
+  font-size:1.25rem ;
   color: #ffff;
   font-weight: bold;
-  margin-left: 36px;
+ 
 }
+
+
+
 .division {
   width: 100%;
   height: 2px;
   background-color: #3f3f3f;
-  margin: 32px 0;
+  margin: 0 0 32px 0;
 }
 .projects-carousel {
   display: flex;
-  width: 100%;
+  max-width: 100%;
   justify-content: space-between;
 }
 .buttonNext {
@@ -367,91 +387,84 @@ p {
 .buttonPrev img, .buttonNext img {
  padding: 10px;
 }
+
+
 .visibleHidden {
   display: flex;
-  max-width: 965px;
+  gap: 50px;
+  overflow-x: scroll;
+  max-width: 900px;
   width: 80%;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scroll-behavior: smooth;
+  
 }
-.bloco1, .bloco2{
+
+.visibleHidden::-webkit-scrollbar {
   display: none;
-  max-width: 965px;
-  width: 100%;
-  justify-content: space-between;
-  gap: 30px;
 }
 .slide {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 280px;
-  width: 100%;
-  height: 190px;
+  justify-content: space-between;
+  min-width: 240px;
+  height: 180px ;
   border-radius: 10px;
+  scroll-snap-align: start;
   cursor: pointer;
 }
-.slide-img{
-  max-width: 100%;
-  overflow: hidden;
+
+.img-slide {
+  height: 100px;
 }
-.slide-img img{
-  max-width: 280px;
+
+
+.img-slide img {
   width: 100%;
-   border-top:  4px solid #3F51B5;
-  border-left:  4px solid #3F51B5;
-  border-right:  4px solid #3F51B5;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border: 4px solid #4558BF;
+ 
 }
-.slide-tittle{
+
+.tittle-slide {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: #E4E4E4;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: bold;
-  width: 100%;
-  height: 64px;
-  background: linear-gradient(#5D70DB,#18204D );
-  border-bottom-right-radius: 10px;
+  width: 240px;
+  height: 50px;
+  background: linear-gradient(#5D70DB, #18204D );
   border-bottom-left-radius: 10px;
-  letter-spacing: 1px;
+  border-bottom-right-radius: 10px;
+ 
+  
 }
-.entrada {
-  animation: showHeader 0.8s forwards;
+.container {
+  display: none;
 }
-
-
-@keyframes showHeader {
-  from {
-    opacity: 0;
-    transform: translate3d(40px, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-.saida {
-  animation: saida 0.8s forwards;
-}
-
-
-@keyframes saida {
-  from {
-    opacity: 0;
-    transform: translate3d(-40px, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.visible {
+.active-content {
   display: flex;
+  animation: showContent 1s forwards;
 }
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+    
+  }
+
+  to {
+    opacity: 1;
+    
+  }
+  }
+
+
+
 .contacts-bg{
   width: 100%;
   height: 90vh;
@@ -568,7 +581,7 @@ footer {
     background-position: bottom left;
   }
   }
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
   .menu-nav {
     font-size: 1rem;
   }
@@ -781,29 +794,6 @@ footer {
    width: 25px;
   }
 
-  .slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 280px;
-    width: 100%;
-    max-height: 130px;
-    height: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  .slide-tittle{
-     font-size: 0.8rem;
-     height: 50px;
-     letter-spacing: 0;
-  }
-  .slide-img{
-    max-width: 100%;
-  }
-  .slide-img img{
-    width: 100%;
-    height: 100px;
-  }
   .contacts-bg{
     background-size: cover;
     background-position: -10rem;
@@ -980,7 +970,7 @@ footer {
   .contacts-social img{
    width: 40px;
   }
-} 
+}  */
 @media (max-width: 800px) {
 
   .header-img.mobileMenu {

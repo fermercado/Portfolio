@@ -14,6 +14,13 @@ let projectJson = [
     github: 'https://github.com/fermercado/Loja-LadoDica'
   },
   {
+    tittle: 'Portifólio',
+    img: 'img/portifólio.png',
+    description: 'em construção',
+    deploy: 'https://fermercado.github.io/Portifolio/',
+    github: 'https://github.com/fermercado/Portifolio'
+  },
+  {
     tittle: 'Site Intistucional',
     img: 'img/siteinstitucional.png',
     description: 'Página desenvolvida em conceito mobile first, tendo a finalidade de ser uma pagina instucional de uma empresa, utilizando HTML/CSS/JavaScript, com scroll suave e menu hamburguer na versão mobile.',
@@ -34,13 +41,7 @@ let projectJson = [
     deploy: 'https://fermercado.github.io/Todo-list/',
     github: 'https://github.com/fermercado/Todo-list'
   },
-  {
-    tittle: 'Portifólio',
-    img: 'img/portifólio.png',
-    description: 'em construção',
-    deploy: 'https://fermercado.github.io/Portifolio/',
-    github: 'https://github.com/fermercado/Portifolio'
-  }
+  
 
 
 

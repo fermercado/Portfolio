@@ -1520,7 +1520,7 @@ footer {
   }
 
   .tittle-slide {
-    font-size: 14px;
+    font-size: 12px;
 
     height: 32px;
   }
@@ -1610,8 +1610,6 @@ footer {
   }
 
   .tittle-slide {
-    font-size: 14px;
-
     height: 32px;
   }
 }

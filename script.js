@@ -34,7 +34,9 @@ const animationScrollNav = 'activeNav'
   menuNav.forEach((menu)=> {
     menu.classList.remove(animationScrollNav)
   })
-}}
+  
+} 
+}
 
 
 function initAnimationScroll() {
@@ -198,7 +200,7 @@ clickButton.forEach(item => {
      }
      contentProjects()
 
-     function initTabNav() {
+     function navigationSlides() {
       const tabMenu = document.querySelectorAll('.slide')
       const tabContent = document.querySelectorAll('.projetcs-show')
     
@@ -219,5 +221,64 @@ clickButton.forEach(item => {
         })
       }
     }
-    initTabNav()
+    navigationSlides()
+
+
+    function animationText () {
+
+      const tittle = document.querySelector('h2')
+
+    function typeWriter (element) {
+      const textArray = element.innerHTML.split('')
+      element.innerHTML = ''
+      textArray.forEach((item, index)=> {
+        setTimeout(() => {
+          element.innerHTML += item
+
+        }, 85 * index)
+
+      })
+    }
+
+    typeWriter(tittle)
+
+
+    }
+
+    animationText()
+
+    
+
+    
+
+  const buttomMobileDescripiton = document.querySelectorAll('.arrow-tittle')
+
+  function accordionDescription () {
+    buttomMobileDescripiton.forEach((item)=> {
+      item.addEventListener('click', () => {
+        const description = document.querySelectorAll('.mobile-description')
+        const iconArrow = document.querySelectorAll('.iconArrow')
+        description.forEach((item) => {
+          item.classList.toggle('active-description')
+        })
+        iconArrow.forEach((item) => {
+          item.classList.toggle('active-description')
+        })
+        
+      })
+      
+      })
+     
+      
+    }
+
+
+  accordionDescription()
+    
+  
+ 
+
+ 
+  
+
 

@@ -34,7 +34,7 @@ main {
 }
 .activeNav.header-container {
   transition: 0.5s;
-  background-color: #3f51b5ce;
+  background-color: #3f51b5d3;
   z-index: 999999;
 }
 .header-nav {
@@ -319,6 +319,7 @@ h5 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .projects-info {
   width: 100%;
@@ -791,9 +792,7 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .ability img {
-    width: 70%;
-  }
+
   .projects-container {
     padding: 36px 40px 36px 40px;
   }
@@ -915,14 +914,14 @@ footer {
     padding-left: 12px;
   }
   h5 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .main-ability-container {
     padding: 32px;
   }
 
   .ability img {
-    width: 65%;
+    width: 70%;
   }
   .projects-container {
     padding: 32px;
@@ -1017,7 +1016,7 @@ footer {
     color: #3f51b5;
     display: block;
     border-top: 4px solid;
-    width: 48px;
+    width: 40px;
     transition: 0.4s;
   }
   #hamburguer-button.activeNav {
@@ -1027,7 +1026,7 @@ footer {
   #hamburguer-button::before {
     content: '';
     display: block;
-    width: 48px;
+    width: 40px;
     height: 4px;
     background: currentColor;
     margin-top: 12px;
@@ -1043,7 +1042,6 @@ footer {
     z-index: 99999999999;
     backdrop-filter: blur(15px);
     overflow: hidden;
-    padding-right: 10px;
   }
   .button-top.mobileMenu {
     visibility: hidden;
@@ -1090,7 +1088,7 @@ footer {
   }
   .menu-nav.mobileMenu:hover {
     transition: all 0.4s ease;
-    background-color: #5d70db69;
+    background-color: #5d70db;
   }
 
   .mobileMenu #hamburguer-button {
@@ -1114,9 +1112,13 @@ footer {
     width: 20px;
   }
 
+  .header-img {
+    width: 40px;
+  }
+
   main {
     width: 100%;
-    padding-top: 86px;
+    padding-top: 68px;
   }
 
   .home-bg {
@@ -1206,25 +1208,17 @@ footer {
     padding-bottom: 8px;
   }
   .ability-info {
-    margin: auto;
-    max-width: 1180px;
-    width: 100%;
-    display: flex;
     flex-wrap: wrap;
-    gap: 30px;
     justify-content: center;
-    row-gap: 20px;
+    gap: 10px;
   }
+
   .ability {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 30%;
   }
 
   .ability img {
-    width: 100%;
-    height: 100px;
+    width: 70%;
   }
 
   .project-info-container {
@@ -1488,8 +1482,13 @@ footer {
   .main-ability-container {
     padding: 16px;
   }
+
+  .ability img {
+    width: 80%;
+  }
+
   h5 {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
   .projects-container {
     padding: 16px;

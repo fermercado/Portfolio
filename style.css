@@ -73,7 +73,7 @@ main {
 }
 .menu-nav:hover {
   transition: all 0.5s;
-  color: #6479f0;
+  color: #90a0ff;
 }
 .activeNav.menu-nav {
   color: #000000;
@@ -107,6 +107,8 @@ main {
 }
 
 .button-top a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #000000;
 }
@@ -121,12 +123,7 @@ main {
 .button-top img {
   width: 20px;
   margin-left: 10px;
-  display: flex;
-  align-items: flex-start;
-}
-
-.button-top:hover img {
-  animation: showInit 1.2s infinite;
+  animation: showInit 0.7s infinite;
 }
 
 @keyframes showInit {
@@ -274,6 +271,10 @@ h4 {
   margin-top: 48px;
   cursor: pointer;
 }
+.button-info:hover {
+  transition: all 0.3s ease;
+  background: linear-gradient(#7a8cf3, #303d86);
+}
 .button-info a {
   color: #ffff;
   font-size: 1.25rem;
@@ -395,6 +396,11 @@ p {
   border-radius: 5px;
   background: linear-gradient(#5d70db, #18204d);
 }
+.button-deploy a:hover,
+.button-git a:hover {
+  transition: all 0.3s ease;
+  background: linear-gradient(#7a8cf3, #303d86);
+}
 
 .division {
   width: 100%;
@@ -415,6 +421,7 @@ p {
   border-bottom-right-radius: 10px;
   cursor: pointer;
 }
+
 .buttonPrev {
   background-color: #4558bf;
   display: flex;
@@ -423,16 +430,23 @@ p {
   border-bottom-left-radius: 10px;
   cursor: pointer;
 }
+
 .buttonPrev img,
 .buttonNext img {
   padding: 10px;
 }
+.buttonPrev:hover,
+.buttonNext:hover {
+  transition: all 0.3s ease;
+  background-color: #8797ee;
+}
 
 .visibleHidden {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   overflow-x: scroll;
-  width: 80%;
+  width: 100%;
+  margin: 0 8px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
@@ -452,6 +466,13 @@ p {
   cursor: pointer;
 }
 
+.slide:hover {
+  transition: all 0.3s ease;
+  opacity: 70%;
+}
+.slide.opacityButton {
+  opacity: 70%;
+}
 .img-slide {
   height: 100px;
 }
@@ -556,6 +577,10 @@ p {
   font-size: 1.5rem;
   font-weight: 600;
 }
+.contact-mail a:hover {
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
 .contact-phone {
   display: flex;
   align-items: center;
@@ -567,10 +592,21 @@ p {
   font-size: 1.5rem;
   font-weight: 600;
 }
+
 .contacts-social {
   display: flex;
   justify-content: space-between;
   padding-top: 48px;
+}
+
+.contacts-social i {
+  color: #4558bf;
+  font-size: 72px;
+}
+.contacts-social i:hover {
+  transition: all 0.5s ease;
+  color: #7182e6;
+  transform: scale(1.1) rotate(-10deg);
 }
 footer {
   display: flex;
@@ -676,19 +712,18 @@ footer {
   }
 
   .visibleHidden {
-    gap: 40px;
+    gap: 30px;
   }
 
   .slide {
-    min-width: 200px;
-    height: 160px;
+    min-width: 220px;
+    width: 100%;
+    height: 180px;
   }
 
   .tittle-slide {
     color: #e4e4e4;
     font-size: 20px;
-
-    width: 100%;
     height: 55px;
   }
   .contacts-bg {
@@ -711,9 +746,6 @@ footer {
   .contact-phone p {
     font-size: 1.25rem;
     letter-spacing: 1px;
-  }
-  .contacts-social img {
-    width: 50px;
   }
 }
 @media (max-width: 1366px) {
@@ -799,11 +831,6 @@ footer {
     width: 30px;
   }
 
-  .visibleHidden {
-    width: 80%;
-    gap: 40px;
-  }
-
   .slide {
     min-width: 180px;
     height: 140px;
@@ -844,8 +871,8 @@ footer {
   .contact-phone img {
     width: 36px;
   }
-  .contacts-social img {
-    width: 48px;
+  .contacts-social i {
+    font-size: 60px;
   }
 }
 @media (max-width: 1024px) {
@@ -928,15 +955,14 @@ footer {
   }
 
   .visibleHidden {
-    width: 80%;
-    gap: 30px;
+    gap: 20px;
   }
 
   .slide {
     position: relative;
     min-width: 130px;
     height: 110px;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .tittle-slide {
@@ -973,9 +999,6 @@ footer {
   }
   .contact-phone img {
     width: 32px;
-  }
-  .contacts-social img {
-    width: 40px;
   }
 }
 @media (max-width: 800px) {
@@ -1275,11 +1298,6 @@ footer {
     width: 30px;
   }
 
-  .visibleHidden {
-    width: 70%;
-    gap: 25px;
-  }
-
   .slide {
     min-width: 160px;
     height: 120px;
@@ -1338,6 +1356,7 @@ footer {
     font-size: 2.26rem;
     color: #4558bf;
     font-weight: bold;
+    text-align: center;
   }
   .contact-mail {
     padding-top: 48px;
@@ -1351,9 +1370,6 @@ footer {
   .contacts-social {
     justify-content: left;
     gap: 80px;
-  }
-  .contacts-social img {
-    width: 60px;
   }
   .name-developer {
     font-size: 1rem;
@@ -1509,13 +1525,12 @@ footer {
     width: 25px;
   }
   .visibleHidden {
-    width: 75%;
-    gap: 20px;
+    gap: 15px;
   }
 
   .slide {
-    min-width: 120px;
-    height: 100px;
+    min-width: 110px;
+    height: 90px;
     justify-content: space-between;
   }
 
@@ -1589,27 +1604,7 @@ footer {
     justify-content: left;
     gap: 60px;
   }
-  .contacts-social img {
-    width: 40px;
-  }
   .name-developer {
     font-size: 0.75rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .visibleHidden {
-    width: 60%;
-    gap: 15px;
-  }
-
-  .slide {
-    min-width: 120px;
-    height: 100px;
-    justify-content: space-between;
-  }
-
-  .tittle-slide {
-    height: 32px;
   }
 }

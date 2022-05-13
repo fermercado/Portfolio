@@ -213,7 +213,7 @@ h2 {
 
 h2::after {
   content: '|';
-  margin-left: 5px;
+  margin-left: 2px;
   opacity: 1;
   animation: blinkBar 0.7s infinite;
 }
@@ -364,7 +364,7 @@ h5 {
   max-width: 600px;
   width: 100%;
   border-radius: 10px;
-  box-shadow: -5px 5px 5px #3f51b5;
+  border: 3px solid #2c2c2c;
 }
 .projects-show-text {
   max-width: 700px;
@@ -398,7 +398,8 @@ p {
   border: 0;
 }
 .button-deploy a,
-.button-git a {
+.button-git a,
+.figma {
   text-decoration: none;
   font-size: 1.25rem;
   color: #ffff;
@@ -416,7 +417,7 @@ p {
 .division {
   width: 100%;
   height: 2px;
-  background-color: #3f3f3f;
+  background-color: #2c2c2c;
   margin: 0 0 32px 0;
 }
 .projects-carousel {
@@ -822,7 +823,8 @@ footer {
   }
 
   .button-deploy a,
-  .button-git a {
+  .button-git a,
+  .figma {
     font-size: 1rem;
     color: #ffff;
 
@@ -969,8 +971,8 @@ footer {
 
   .slide {
     position: relative;
-    min-width: 130px;
-    height: 110px;
+    min-width: 140px;
+    height: 120px;
     justify-content: space-between;
   }
 
@@ -1017,7 +1019,7 @@ footer {
 
   #btn-mobile {
     display: flex;
-    padding: 15px;
+    padding: 10px 15px;
     border: none;
     background: none;
     cursor: pointer;
@@ -1113,7 +1115,7 @@ footer {
   .mobileMenu #hamburguer-button::after {
     color: #000;
     transform: rotate(-135deg);
-    top: -15px;
+    top: -16px;
   }
   .activeNav.button-top a {
     font-size: 1.2rem;
@@ -1313,6 +1315,7 @@ footer {
 
     height: 40px;
   }
+
   .contacts-bg {
     background-image: url(img/bgcontatcmobile.png);
     background-repeat: no-repeat;
@@ -1393,10 +1396,10 @@ footer {
     font-size: 0.75rem;
   }
   .activeNav.button-top a {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .button-top img {
-    width: 20px;
+    width: 16px;
   }
 
   .separator.mobileMenu {
@@ -1515,7 +1518,8 @@ footer {
     line-height: 30px;
   }
   .button-deploy a,
-  .button-git a {
+  .button-git a,
+  .figma {
     font-size: 1rem;
     color: #ffff;
 
@@ -1548,7 +1552,8 @@ footer {
     height: 32px;
   }
   .button-deploy a,
-  .button-git a {
+  .button-git a,
+  .figma {
     font-size: 0.75rem;
 
     padding: 8px 14px;

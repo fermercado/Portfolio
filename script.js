@@ -149,7 +149,6 @@ function contentProjects() {
     projectShow.querySelector('.button-deploy a').innerHTML = item.buttonTittle
     projectShow.querySelector('.button-git a').href = item.github
     projectShow.querySelector('.figma').innerHTML = item.buttonTittle
-    projectShow.querySelector('.figma').href = item.figma
 
     document.querySelector('.projects-show-container').append(projectShow)
   })

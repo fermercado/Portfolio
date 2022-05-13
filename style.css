@@ -354,7 +354,7 @@ h5 {
   max-width: 600px;
   width: 100%;
   border-radius: 10px;
-  box-shadow: -5px 5px 5px #3f3f3f9a;
+  box-shadow: -5px 5px 5px #3f51b5;
 }
 .projects-show-text {
   max-width: 700px;
@@ -472,7 +472,7 @@ p {
   opacity: 70%;
 }
 .slide.opacityButton {
-  opacity: 70%;
+  opacity: 60%;
 }
 .img-slide {
   height: 100px;
@@ -1229,7 +1229,7 @@ footer {
   h6 {
     margin-top: 20px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .arrow-tittle {
     margin: auto;
@@ -1242,7 +1242,7 @@ footer {
   .iconArrow {
     color: #3f51b5;
     padding-left: 10px;
-    font-size: 28px;
+    font-size: 22px;
     transform: rotateX(180deg);
   }
 
@@ -1373,7 +1373,7 @@ footer {
   main {
     width: 100%;
     margin: auto;
-    padding-top: 86px;
+    padding-top: 70px;
   }
   .menu-nav {
     text-decoration: none;
@@ -1497,7 +1497,6 @@ footer {
     border-radius: 5px;
   }
   h6 {
-    font-size: 1.2rem;
     color: #4558bf;
     text-align: center;
   }
@@ -1528,8 +1527,8 @@ footer {
   }
 
   .slide {
-    min-width: 110px;
-    height: 90px;
+    min-width: 140px;
+    height: 110px;
     justify-content: space-between;
   }
 

@@ -193,7 +193,6 @@ function animationText() {
 
   function typeWriter(element) {
     const textArray = element.innerHTML.split('')
-    const textArrayRemove = element.innerHTML.split('')
     element.innerHTML = ''
     textArray.forEach((item, index) => {
       setTimeout(() => {

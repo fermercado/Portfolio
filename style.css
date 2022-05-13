@@ -57,13 +57,13 @@ main {
 .header-nav ul {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .header-nav ul span {
   display: none;
 }
 .header-nav ul li {
   list-style: none;
-  margin-left: 20px;
 }
 
 .header-nav img {
@@ -87,6 +87,10 @@ main {
 }
 .activeNav.menu-nav {
   color: #000000;
+}
+.activeNav.menu-nav:hover {
+  transition: all 0.3s;
+  color: #ffffff80;
 }
 .activeNav.menu-nav:last-child {
   padding-right: 10px;

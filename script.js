@@ -28,9 +28,6 @@ function headerScroll() {
       menu.classList.remove(animationScrollNav)
     })
   }
-  if (windowTop === 0) {
-    animationText()
-  }
 }
 
 function initAnimationScroll() {
@@ -149,7 +146,10 @@ function contentProjects() {
     projectShow.querySelector('.projects-show-text p').innerHTML =
       item.description
     projectShow.querySelector('.button-deploy a').href = item.deploy
+    projectShow.querySelector('.button-deploy a').innerHTML = item.buttonTittle
     projectShow.querySelector('.button-git a').href = item.github
+    projectShow.querySelector('.figma').innerHTML = item.buttonTittle
+    projectShow.querySelector('.figma').href = item.figma
 
     document.querySelector('.projects-show-container').append(projectShow)
   })
@@ -193,6 +193,7 @@ function animationText() {
 
   function typeWriter(element) {
     const textArray = element.innerHTML.split('')
+    const textArrayRemove = element.innerHTML.split('')
     element.innerHTML = ''
     textArray.forEach((item, index) => {
       setTimeout(() => {
@@ -203,8 +204,8 @@ function animationText() {
 
   typeWriter(tittle)
 }
-
 animationText()
+setInterval(() => animationText(), 7000)
 
 const buttomMobileDescripiton = document.querySelectorAll('.arrow-tittle')
 

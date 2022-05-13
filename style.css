@@ -12,7 +12,7 @@ body {
 }
 body.activeNav {
   border-left: 6px solid #3f51b5ce;
-  border-right: 7px solid #3f51b5ce;
+  border-right: 6px solid #3f51b5ce;
 }
 body::-webkit-scrollbar {
   width: 12px;

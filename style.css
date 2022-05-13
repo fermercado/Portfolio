@@ -57,13 +57,13 @@ main {
 .header-nav ul {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
 }
 .header-nav ul span {
   display: none;
 }
 .header-nav ul li {
   list-style: none;
+  margin-left: 20px;
 }
 
 .header-nav img {

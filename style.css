@@ -696,8 +696,7 @@ footer {
   }
   .main-bg {
     width: 100%;
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding: 60px 0;
     background-image: url('img/Bg\ main\ .png');
     background-repeat: no-repeat;
     background-size: 110%;
@@ -706,7 +705,6 @@ footer {
   h4 {
     font-size: 1.5rem;
     line-height: 48px;
-    font-weight: 500;
   }
   .button-info img {
     padding-left: 12px;
@@ -780,7 +778,6 @@ footer {
     font-size: 2rem;
   }
   h2 {
-    color: #abaaaa;
     font-size: 1.8rem;
     margin-top: 0px;
   }
@@ -799,7 +796,6 @@ footer {
     padding-left: 12px;
   }
   h5 {
-    color: #abaaaa;
     font-size: 1.25rem;
   }
   .ability {
@@ -816,7 +812,6 @@ footer {
   }
   .projects-show-text {
     max-width: 700px;
-    width: 100%;
   }
   h6 {
     font-size: 1.2rem;
@@ -830,8 +825,6 @@ footer {
   .button-git a,
   .figma {
     font-size: 1rem;
-    color: #ffff;
-
     padding: 10px 20px;
   }
   .buttonPrev img,
@@ -845,18 +838,14 @@ footer {
     justify-content: center;
     width: 30px;
   }
-
   .slide {
     min-width: 180px;
     height: 140px;
   }
-
   .tittle-slide {
     font-size: 18px;
-
     height: 55px;
   }
-
   .contacts-bg {
     background-size: cover;
     background-position: -10rem;
@@ -919,16 +908,11 @@ footer {
   .home-name {
     background-size: 15rem;
   }
-  h3 {
-    font-size: 1.25rem;
-  }
   h4 {
     font-size: 1.2rem;
     line-height: 40px;
   }
-  .button-info img {
-    padding-left: 12px;
-  }
+
   h5 {
     font-size: 0.9rem;
   }
@@ -945,10 +929,6 @@ footer {
   .projects-show-img {
     margin-right: 20px;
   }
-  .projects-show-text {
-    max-width: 700px;
-    width: 100%;
-  }
   h6 {
     font-size: 1rem;
   }
@@ -959,13 +939,10 @@ footer {
 
   .buttonPrev img,
   .buttonNext img {
-    padding: 2px;
     width: 20px;
   }
   .buttonPrev,
   .buttonNext {
-    display: flex;
-    justify-content: center;
     width: 25px;
   }
 
@@ -1002,12 +979,6 @@ footer {
   }
   .contacts {
     padding-left: 40px;
-  }
-  .contact-mail a {
-    font-size: 1rem;
-  }
-  .contact-phone p {
-    font-size: 1rem;
   }
   .contact-mail img {
     width: 32px;
@@ -1195,8 +1166,6 @@ footer {
   }
   h3 {
     padding-left: 0.75rem;
-    font-size: 1.25rem;
-    color: #4558bf;
   }
   .text-info {
     padding: 32px;
@@ -1206,15 +1175,7 @@ footer {
     line-height: 40px;
   }
   .button-info a {
-    color: #ffff;
     font-size: 1.25rem;
-  }
-  .button-info img {
-    padding-left: 12px;
-  }
-  .main-ability {
-    width: 100%;
-    margin: auto;
   }
   .main-ability-container {
     padding: 32px;
@@ -1231,10 +1192,6 @@ footer {
 
   .ability {
     width: 30%;
-  }
-
-  .ability img {
-    width: 70%;
   }
 
   .project-info-container {
@@ -1298,25 +1255,20 @@ footer {
 
   .buttonPrev img,
   .buttonNext img {
-    padding: 2px;
-    width: 25px;
+    width: 22px;
   }
   .buttonPrev,
   .buttonNext {
-    display: flex;
-    justify-content: center;
     width: 30px;
   }
 
   .slide {
     min-width: 160px;
     height: 120px;
-    justify-content: space-between;
   }
 
   .tittle-slide {
     font-size: 14px;
-
     height: 40px;
   }
 
@@ -1332,6 +1284,7 @@ footer {
   .contacts-img img {
     width: 264px;
   }
+
   .contacts-container {
     margin: auto;
     justify-content: center;
@@ -1388,16 +1341,7 @@ footer {
 }
 @media (max-width: 500px) {
   main {
-    width: 100%;
-    margin: auto;
     padding-top: 70px;
-  }
-  .menu-nav {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #4558bf;
-    font-weight: bold;
-    font-size: 0.75rem;
   }
   .activeNav.button-top a {
     font-size: 1rem;
@@ -1424,56 +1368,28 @@ footer {
   .header-nav {
     width: 90%;
   }
-
-  .home-name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    background-image: none;
-    height: 130px;
-  }
   .home-photo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding-bottom: 50px;
   }
   .home-photo img {
     width: 250px;
   }
   h1 {
-    color: #4558bf;
     font-size: 1.2rem;
-    font-weight: bold;
     line-height: 2rem;
   }
   h2 {
-    color: #abaaaa;
     font-size: 1rem;
-    margin-top: 0;
   }
 
   .main-container {
     width: 90%;
-    margin: auto;
-  }
-  .main-about {
-    width: 100%;
-    margin: auto;
-  }
-  .name-info {
-    display: flex;
-    margin-bottom: 1rem;
   }
   .name-info img {
     width: 20px;
   }
   h3 {
-    padding-left: 0.75rem;
     font-size: 1rem;
-    color: #4558bf;
   }
   .text-info {
     padding: 16px;
@@ -1487,10 +1403,7 @@ footer {
     height: 44px;
   }
   .button-info a {
-    color: #ffff;
     font-size: 0.8rem;
-    font-weight: bold;
-    text-decoration: none;
   }
   .button-info img {
     padding-left: 8px;
@@ -1514,7 +1427,6 @@ footer {
     border-radius: 5px;
   }
   h6 {
-    color: #4558bf;
     text-align: center;
   }
   .projects-show-text p {
@@ -1531,13 +1443,10 @@ footer {
   }
   .buttonPrev img,
   .buttonNext img {
-    padding: 2px;
     width: 20px;
   }
   .buttonPrev,
   .buttonNext {
-    display: flex;
-    justify-content: center;
     width: 25px;
   }
   .visibleHidden {
@@ -1547,12 +1456,10 @@ footer {
   .slide {
     min-width: 140px;
     height: 110px;
-    justify-content: space-between;
   }
 
   .tittle-slide {
     font-size: 12px;
-
     height: 32px;
   }
   .button-deploy a,
@@ -1563,54 +1470,25 @@ footer {
     padding: 8px 14px;
   }
   .contacts-bg {
-    background-position: top left;
     background-size: 20rem;
-  }
-  .contacts-img {
-    justify-content: center;
   }
   .contacts-img img {
     width: 200px;
   }
   .contacts-container {
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    flex-direction: column;
-    row-gap: 76px;
     max-width: 320px;
     width: 90%;
   }
-  .contacts-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: none;
-  }
   .contacts {
     width: 80%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    align-items: left;
-  }
-  .name-contact-info {
-    display: flex;
-    justify-content: left;
   }
   .name-contact-info img {
     width: 26px;
   }
   .name-contact-info p {
-    padding-left: 1rem;
     font-size: 1.75rem;
-    color: #4558bf;
-    font-weight: bold;
   }
-  .contact-mail {
-    padding-top: 48px;
-  }
+
   .contact-mail a {
     font-size: 1rem;
   }
@@ -1618,7 +1496,6 @@ footer {
     font-size: 1rem;
   }
   .contacts-social {
-    justify-content: left;
     gap: 60px;
   }
   .name-developer {

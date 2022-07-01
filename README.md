@@ -1,4 +1,4 @@
-# Portifólio
+# Portfólio
 
 #### Pagina responsiva desenvolvida usando as ferramentas HTML, CSS e JavaScript.
 

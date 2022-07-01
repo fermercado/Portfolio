@@ -20,4 +20,4 @@ IMPLEMENTAÇÕES
 
 [X] Menu hamburguer no modo mobile
 
-Deploy: https://fermercado.github.io/Portifolio/
+Deploy: https://fermercado.github.io/Portfolio/

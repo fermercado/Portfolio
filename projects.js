@@ -22,8 +22,7 @@ let projectJson = [
     img: 'img/portifólio.png',
     description:
       'Projeto responsivo utilizando as tecnologias HTML/CSS/JavaScript, feito do zero des da parte do design a parte do codigo. não fiz a utilização de frameworks a ideia aqui é forçar o aprendizado utilizando as ferramentas de maneira pura, mais detalhes no repositório.',
-    deploy:
-      'https://www.figma.com/proto/iP9GX0SjtVPNrCjdlq8ZKB/Portif%C3%B3lio-Fernando-Mercado?node-id=175%3A868&scaling=scale-down&page-id=0%3A1&starting-point-node-id=261%3A874',
+    deploy:'https://www.figma.com/file/iP9GX0SjtVPNrCjdlq8ZKB/Portif%C3%B3lio-Fernando-Mercado',
     buttonTittle: 'FIGMA',
     github: 'https://github.com/fermercado/Portifolio',
   },

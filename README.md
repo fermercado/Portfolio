@@ -1,6 +1,6 @@
 # Portfólio
 
-#### Pagina responsiva desenvolvida usando as ferramentas HTML, CSS e JavaScript.
+#### Pagina responsiva desenvolvida usando as ferramentas Figma,HTML, CSS e JavaScript.
 
 #### Projeto feito do zero des da parte do design ao código.
 
@@ -20,4 +20,5 @@ IMPLEMENTAÇÕES
 
 [X] Menu hamburguer no modo mobile
 
-Deploy: https://fermercado.github.io/Portfolio/
+- Figma: https://www.figma.com/file/iP9GX0SjtVPNrCjdlq8ZKB/Portif%C3%B3lio-Fernando-Mercado?node-id=0%3A1
+- Deploy: https://fermercado.github.io/Portfolio/

@@ -20,5 +20,5 @@ IMPLEMENTAÇÕES
 
 [X] Menu hamburguer no modo mobile
 
-Figma: https://www.figma.com/file/iP9GX0SjtVPNrCjdlq8ZKB/Portif%C3%B3lio-Fernando-Mercado?node-id=0%3A1
-Deploy: https://fermercado.github.io/Portfolio/
+- Figma: https://www.figma.com/file/iP9GX0SjtVPNrCjdlq8ZKB/Portif%C3%B3lio-Fernando-Mercado?node-id=0%3A1
+- Deploy: https://fermercado.github.io/Portfolio/

@@ -10,10 +10,6 @@ body {
   overflow: auto;
   transition: 0.5s;
 }
-body.activeNav {
-  border-left: 6px solid #3f51b5ce;
-  border-right: 6px solid #3f51b5ce;
-}
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -32,7 +28,6 @@ body.mobileMenu {
 main {
   width: 100%;
   margin: auto;
-  padding-top: 86px;
 }
 .header-container {
   width: 100%;
@@ -49,10 +44,12 @@ main {
 }
 .header-nav {
   margin: auto;
-  width: 70%;
+  max-width: 1076px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 16px;
 }
 .header-nav ul {
   display: flex;
@@ -63,12 +60,13 @@ main {
 }
 .header-nav ul li {
   list-style: none;
-  margin-left: 20px;
+  margin-left: 24px;
 }
 
 .header-nav img {
+  width: 40px;
   display: block;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .activeNav.header-img {
@@ -79,7 +77,7 @@ main {
   text-transform: uppercase;
   color: #4558bf;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .menu-nav:hover {
   transition: all 0.5s;
@@ -91,9 +89,6 @@ main {
 .activeNav.menu-nav:hover {
   transition: all 0.3s;
   color: #ffffff80;
-}
-.activeNav.menu-nav:last-child {
-  padding-right: 10px;
 }
 
 @keyframes showHeader {
@@ -131,13 +126,13 @@ main {
   align-items: center;
   color: #000000;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 .button-top img {
-  width: 20px;
+  width: 14px;
   margin-left: 10px;
-  animation: showInit 0.7s infinite;
+  animation: showInit 1s infinite;
 }
 
 @keyframes showInit {
@@ -152,25 +147,28 @@ main {
   }
 }
 .home-bg {
+  display: flex;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  margin: auto;
   background-image: url(img/BGHOME.png);
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: 80rem;
+  background-size: cover;
+  background-position: -8rem;
 }
 .home {
   width: 100%;
-  height: 90vh;
   display: flex;
   align-items: center;
 }
 .home-container {
+  max-width: 1076px;
+  padding: 0 16px;
+  width: 100%;
   display: flex;
   align-items: center;
   margin: auto;
-  width: 70%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   animation: showHome 0.8s forwards;
 }
 
@@ -190,32 +188,39 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  width: 60%;
+  width: 500px;
   height: 500px;
   background-image: url(img/Setahome.png);
   background-repeat: no-repeat;
-  background-position: 30px;
-  background-size: auto;
+  background-size: 70%;
+  background-position: 1.75rem;
 }
 .home-photo {
   display: flex;
   align-items: center;
   justify-content: right;
 }
+.home-photo img {
+  width: 340px;
+}
 h1 {
   color: #4558bf;
-  font-size: 3rem;
+  font-size: 32px;
   font-weight: bold;
-  line-height: 4rem;
+  line-height: 3rem;
 }
 h2 {
-  color: #abaaaa;
-  font-size: 2.5rem;
+  font-size: 24px;
   font-weight: 500;
-  margin-top: 1rem;
+}
+.ui {
+  padding-top: 16px;
+}
+.h2 {
+  padding-top: 16px;
 }
 
-h2::after {
+.h2::after {
   content: "|";
   margin-left: 2px;
   opacity: 1;
@@ -236,24 +241,25 @@ h2::after {
   padding-top: 60px;
   background-image: url("img/Bg\ main\ .png");
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: right 50%;
+  background-position: center;
 }
 .main-container {
-  width: 70%;
-  margin: auto;
-}
-.main-about {
+  max-width: 1076px;
+  padding: 0 16px;
   width: 100%;
   margin: auto;
 }
+/* .main-about {
+  width: 100%;
+  margin: auto;
+} */
 .name-info {
   display: flex;
   margin-bottom: 1rem;
 }
 h3 {
   padding-left: 1.75rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #4558bf;
 }
 .text-info {
@@ -264,18 +270,17 @@ h3 {
   border-radius: 10px;
   justify-content: space-between;
   align-items: center;
-  padding: 36px 48px 48px 48px;
-  margin-bottom: 5rem;
+  padding: 32px;
+  margin-bottom: 56px;
 }
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 48px;
-  font-weight: 500;
+  font-weight: 600;
   color: #abaaaa;
 }
 .button-info {
-  width: 208px;
-  height: 50px;
+  padding: 12px 24px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -290,6 +295,8 @@ h4 {
   background: linear-gradient(#7a8cf3, #303d86);
 }
 .button-info a {
+  display: flex;
+  align-items: center;
   color: #ffff;
   font-size: 1.25rem;
   font-weight: bold;
@@ -298,10 +305,10 @@ h4 {
 .button-info img {
   padding-left: 12px;
 }
-.main-ability {
+/* .main-ability {
   width: 100%;
   margin: auto;
-}
+} */
 .main-ability-container {
   display: flex;
   width: 100%;
@@ -309,7 +316,7 @@ h4 {
   border-radius: 10px;
   justify-content: space-between;
   align-items: center;
-  padding: 48px;
+  padding: 32px;
 }
 
 .ability {
@@ -319,38 +326,37 @@ h4 {
   align-items: center;
 }
 
+.ability img {
+  width: 100px;
+}
+
 h5 {
   color: #abaaaa;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
   padding-bottom: 12px;
   font-weight: bold;
   text-align: center;
 }
 .ability-info {
-  margin: auto;
-  max-width: 1180px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
 }
 .projects-info {
-  width: 100%;
-  margin-top: 100px;
+  margin-top: 56px;
 }
 
 .projects-container {
-  width: 100%;
   border: 4px solid #4558bf;
   border-radius: 10px;
-  padding: 40px 48px 40px 48px;
+  padding: 32px;
 }
 
 .projetcs-show {
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: space-between;
   display: none;
 }
@@ -359,8 +365,7 @@ h5 {
 }
 .projects-show-img {
   display: flex;
-  align-items: center;
-  max-width: 600px;
+  align-items: flex-start;
   width: 100%;
   margin-right: 50px;
 }
@@ -376,7 +381,7 @@ h5 {
 }
 
 h6 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #4558bf;
   text-align: left;
 }
@@ -394,7 +399,7 @@ p {
   display: flex;
   justify-content: center;
   width: 100%;
-  gap: 36px;
+  gap: 32px;
   margin: 48px 0 48px 0;
 }
 .button-deploy,
@@ -405,7 +410,7 @@ p {
 .button-git a,
 .figma {
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #ffff;
   font-weight: bold;
   padding: 12px 24px;
@@ -490,7 +495,7 @@ p {
   opacity: 60%;
 }
 .img-slide {
-  height: 100px;
+  height: 90px;
 }
 
 .img-slide img {
@@ -532,12 +537,13 @@ p {
 }
 
 .contacts-bg {
+  display: flex;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url(img/contacts-bg.png);
   background-repeat: no-repeat;
-  background-position: left;
-  background-size: 80rem;
+  background-size: cover;
+  background-position: -30rem;
 }
 .contacts-img {
   display: flex;
@@ -545,13 +551,19 @@ p {
   align-items: center;
   width: 50%;
 }
+
+.contacts-img img {
+  max-width: 400px;
+  width: 100%;
+}
 .contacts-container {
   display: flex;
-  width: 70%;
+  max-width: 1076px;
+  width: 100%;
+  padding: 0 16px;
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  height: 90vh;
 }
 .contatcs-info-container {
   display: flex;
@@ -571,13 +583,14 @@ p {
 }
 .name-contact-info {
   display: flex;
+  gap: 24px;
+  padding-left: 16px;
 }
 .name-contact-info img {
-  width: 33px;
+  width: 24px;
 }
 .name-contact-info p {
-  padding-left: 1.75rem;
-  font-size: 3rem;
+  font-size: 2.25rem;
   color: #4558bf;
   font-weight: bold;
 }
@@ -590,7 +603,7 @@ p {
   color: #abaaaa;
   text-decoration: none;
   padding-left: 16px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 .contact-mail a:hover {
@@ -605,14 +618,14 @@ p {
 .contact-phone p {
   color: #abaaaa;
   padding-left: 16px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
 .contacts-social {
   display: flex;
   justify-content: space-between;
-  padding-top: 48px;
+  padding-top: 32px;
 }
 
 .contacts-social i {
@@ -627,7 +640,7 @@ p {
 footer {
   display: flex;
   width: 100%;
-  height: 80px;
+  height: 64px;
   background-color: #3f51b5ce;
   justify-content: center;
   align-items: center;
@@ -635,7 +648,7 @@ footer {
 .name-developer {
   text-align: center;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 600;
   color: #000000;
 }
 .js-scroll {
@@ -650,343 +663,32 @@ footer {
   transform: translate3d(0, 0, 0);
 }
 
-@media (min-width: 1920px) {
-  .header-nav,
-  .home-container,
-  .main-container,
-  .contacts-container {
-    max-width: 1289px;
-    width: 100%;
-  }
+@media (min-width: 1100px) {
   .home-bg {
-    background-size: 100rem;
+    background-size: auto 100%;
+    background-position: -4rem;
   }
+
   .contacts-bg {
-    background-size: 105rem;
-    background-position: bottom left;
+    background-size: auto 100%;
   }
 }
-@media (max-width: 1500px) {
-  .menu-nav {
-    font-size: 1rem;
-  }
-  .button-top {
-    font-size: 1rem;
-  }
+@media (min-width: 1440px) {
   .home-bg {
-    height: 90vh;
-    background-position: contain;
-    background-size: 74rem;
+    background-size: contain;
+    background-position: right;
   }
 
-  .home-name {
-    background-size: 25rem;
-  }
-  .home-photo img {
-    width: 400px;
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 2.2rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
   .main-bg {
-    width: 100%;
-    padding: 60px 0;
-    background-image: url("img/Bg\ main\ .png");
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: 100%;
-  }
-  h4 {
-    font-size: 1.5rem;
-    line-height: 48px;
-  }
-  .button-info img {
-    padding-left: 12px;
-  }
-  h5 {
-    font-size: 1.2rem;
-  }
-
-  .ability img {
-    width: 80%;
-  }
-
-  h6 {
-    font-size: 1.75rem;
-  }
-  p {
-    font-size: 1.2rem;
-    line-height: 32px;
-  }
-
-  .visibleHidden {
-    gap: 30px;
-  }
-
-  .slide {
-    min-width: 220px;
-    width: 100%;
-    height: 180px;
-  }
-
-  .tittle-slide {
-    color: #e4e4e4;
-    font-size: 20px;
-    height: 55px;
-  }
-  .contacts-bg {
-    background-size: 78rem;
-  }
-  .contacts-img img {
-    width: 400px;
-  }
-  .name-contact-info img {
-    width: 30px;
-  }
-  .name-contact-info p {
-    font-size: 2.5rem;
-  }
-  .contact-mail a {
-    font-size: 1.25rem;
-
-    letter-spacing: 1px;
-  }
-  .contact-phone p {
-    font-size: 1.25rem;
-    letter-spacing: 1px;
-  }
-}
-@media (max-width: 1366px) {
-  .home-bg {
-    background-size: cover;
-    background-position: 7rem;
-  }
-  .home-name {
-    background-size: 20rem;
-  }
-  .home-photo img {
-    width: 300px;
-  }
-  h1 {
-    line-height: 3.2rem;
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.8rem;
-    margin-top: 0px;
-  }
-  .main-bg {
-    background-size: 90rem;
     background-position: center;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  h4 {
-    font-size: 1.25rem;
-    line-height: 48px;
-  }
-  .button-info img {
-    padding-left: 12px;
-  }
-  h5 {
-    font-size: 1.25rem;
-  }
-  .ability {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .projects-container {
-    padding: 36px 40px 36px 40px;
-  }
-  .projects-show-img {
-    margin-right: 20px;
-  }
-  .projects-show-text {
-    max-width: 700px;
-  }
-  h6 {
-    font-size: 1.2rem;
-  }
-  p {
-    font-size: 1rem;
-    line-height: 30px;
-  }
-
-  .button-deploy a,
-  .button-git a,
-  .figma {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-  .buttonPrev img,
-  .buttonNext img {
-    padding: 2px;
-    width: 25px;
-  }
-  .buttonPrev,
-  .buttonNext {
-    display: flex;
-    justify-content: center;
-    width: 30px;
-  }
-  .slide {
-    min-width: 180px;
-    height: 140px;
-  }
-  .tittle-slide {
-    font-size: 18px;
-    height: 55px;
+    background-size: 100% auto;
   }
   .contacts-bg {
-    background-size: cover;
-    background-position: -10rem;
-  }
-  .contacts-img img {
-    width: 300px;
-  }
-  .name-contact-info img {
-    width: 32px;
-  }
-  .name-contact-info p {
-    padding-left: 1rem;
-    font-size: 2.2rem;
-  }
-  .contacts {
-    padding-left: 50px;
-  }
-  .contact-mail a {
-    font-size: 1rem;
-  }
-  .contact-phone p {
-    font-size: 1rem;
-  }
-  .contact-mail img {
-    width: 36px;
-  }
-  .contact-phone img {
-    width: 36px;
-  }
-  .contacts-social i {
-    font-size: 60px;
+    background-size: contain;
+    background-position: left;
   }
 }
-@media (max-width: 1024px) {
-  .home-photo img {
-    width: 250px;
-  }
-  h1 {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-    margin-top: 0.5rem;
-  }
-  .menu-nav {
-    font-size: 0.75rem;
-  }
-  .button-top a {
-    font-size: 0.75rem;
-  }
-  .button-top img {
-    width: 15px;
-  }
 
-  .home-bg {
-    background-size: cover;
-    background-position: 1rem;
-  }
-  .home-name {
-    background-size: 15rem;
-  }
-  h4 {
-    font-size: 1.2rem;
-    line-height: 40px;
-  }
-
-  h5 {
-    font-size: 0.9rem;
-  }
-  .main-ability-container {
-    padding: 32px;
-  }
-
-  .ability img {
-    width: 70%;
-  }
-  .projects-container {
-    padding: 32px;
-  }
-  .projects-show-img {
-    margin-right: 20px;
-  }
-  h6 {
-    font-size: 1rem;
-  }
-  p {
-    font-size: 0.75rem;
-    line-height: 24px;
-  }
-
-  .buttonPrev img,
-  .buttonNext img {
-    width: 20px;
-  }
-  .buttonPrev,
-  .buttonNext {
-    width: 25px;
-  }
-
-  .visibleHidden {
-    gap: 20px;
-  }
-
-  .slide {
-    position: relative;
-    min-width: 140px;
-    height: 120px;
-    justify-content: space-between;
-  }
-
-  .tittle-slide {
-    position: absolute;
-    height: 30px;
-    font-size: 12px;
-    bottom: 0;
-  }
-
-  .contacts-bg {
-    background-size: cover;
-    background-position: -20rem;
-  }
-  .contacts-img img {
-    width: 250px;
-  }
-  .name-contact-info img {
-    width: 24px;
-  }
-  .name-contact-info p {
-    font-size: 2rem;
-  }
-  .contacts {
-    padding-left: 40px;
-  }
-  .contact-mail img {
-    width: 32px;
-  }
-  .contact-phone img {
-    width: 32px;
-  }
-}
 @media (max-width: 800px) {
   .header-img.mobileMenu {
     visibility: hidden;
@@ -994,7 +696,6 @@ footer {
 
   #btn-mobile {
     display: flex;
-    padding: 10px 15px;
     border: none;
     background: none;
     cursor: pointer;
@@ -1029,6 +730,19 @@ footer {
     z-index: 99999999999;
     backdrop-filter: blur(15px);
     overflow: hidden;
+    animation: showMenu 0.8s forwards;
+    padding-top: 16px;
+  }
+  @keyframes showMenu {
+    from {
+      opacity: 0;
+      height: 0;
+    }
+
+    to {
+      opacity: 1;
+      height: 100vh;
+    }
   }
   .button-top.mobileMenu {
     visibility: hidden;
@@ -1095,6 +809,7 @@ footer {
   .activeNav.button-top a {
     font-size: 1.2rem;
   }
+
   .button-top img {
     width: 20px;
   }
@@ -1104,22 +819,18 @@ footer {
   }
 
   main {
-    width: 100%;
-    padding-top: 68px;
+    padding-top: 64px;
   }
 
   .home-bg {
     background-image: url(img/bgmobile.png);
     background-position: top right;
     background-size: 30rem;
+    background-repeat: no-repeat;
   }
   .home-container {
     flex-direction: column-reverse;
     justify-content: center;
-  }
-
-  .header-nav {
-    width: 80%;
   }
 
   .home-name {
@@ -1138,25 +849,25 @@ footer {
     padding-bottom: 120px;
   }
   .home-photo img {
-    width: 300px;
+    max-width: 340px;
+    width: 100%;
   }
   h1 {
-    font-size: 1.8rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-top: 0;
   }
 
-  .main-container {
-    width: 80%;
-    margin: auto;
+  .ui {
+    padding-top: 16px;
   }
-  .main-about {
-    width: 100%;
-    margin: auto;
+  .h2 {
+    padding-top: 8px;
   }
+
   .name-info {
     display: flex;
     margin-bottom: 1rem;
@@ -1165,42 +876,71 @@ footer {
     width: 22px;
   }
   h3 {
+    font-size: 20px;
     padding-left: 0.75rem;
   }
   .text-info {
-    padding: 32px;
+    padding: 16px;
   }
   h4 {
-    font-size: 1.5rem;
+    font-size: 16px;
     line-height: 40px;
   }
+  .projects-show-text {
+    margin-top: 20px;
+    width: 100%;
+  }
   .button-info a {
-    font-size: 1.25rem;
+    font-size: 16px;
   }
   .main-ability-container {
-    padding: 32px;
+    padding: 16px;
   }
   h5 {
-    font-size: 1rem;
+    font-size: 0.75rem;
     padding-bottom: 8px;
+  }
+
+  .ability img {
+    width: 80%;
+    max-width: 70px;
+  }
+  .ability {
+    width: 28%;
   }
   .ability-info {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 16px;
   }
 
-  .ability {
-    width: 30%;
+  .projects-container {
+    padding: 16px;
+  }
+
+  .button-deploy a,
+  .button-git a,
+  .figma {
+    font-size: 14px;
+    padding: 12px 20px;
   }
 
   .project-info-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .projects-show-img {
+    margin-right: 0;
+  }
+  .projects-show-img img {
+    max-width: 1076px;
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #2c2c2c;
   }
 
   h6 {
-    margin-top: 20px;
     text-align: center;
     font-size: 1.2rem;
   }
@@ -1231,7 +971,7 @@ footer {
   .mobile-description {
     margin-top: 10px;
     display: none;
-    font-size: 1.2rem;
+    font-size: 16px;
     line-height: 32px;
     animation: showDesc2 0.5s forwards;
   }
@@ -1252,10 +992,15 @@ footer {
       transform: translate3d(0, 0, 0);
     }
   }
+  .visibleHidden {
+    gap: 24px;
+
+    margin: 0 14px;
+  }
 
   .buttonPrev img,
   .buttonNext img {
-    width: 22px;
+    width: 32px;
   }
   .buttonPrev,
   .buttonNext {
@@ -1289,11 +1034,8 @@ footer {
     margin: auto;
     justify-content: center;
     align-items: center;
-    height: 90vh;
     flex-direction: column;
     row-gap: 76px;
-    max-width: 570px;
-    width: 80%;
   }
   .contacts-info {
     display: flex;
@@ -1311,9 +1053,11 @@ footer {
   .name-contact-info {
     display: flex;
     justify-content: left;
+    gap: 0;
+    padding-left: 0;
   }
   .name-contact-info img {
-    width: 30px;
+    width: 24px;
   }
   .name-contact-info p {
     padding-left: 1rem;
@@ -1326,179 +1070,28 @@ footer {
     padding-top: 48px;
   }
   .contact-mail a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .contact-phone p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+  .contact-mail img {
+    width: 24px;
+  }
+  .contact-phone img {
+    width: 24px;
   }
   .contacts-social {
     justify-content: left;
-    gap: 80px;
+    gap: 40px;
   }
   .name-developer {
     font-size: 1rem;
   }
 }
-@media (max-width: 500px) {
-  main {
-    padding-top: 70px;
-  }
-  .activeNav.button-top a {
-    font-size: 1rem;
-  }
-  .button-top img {
-    width: 16px;
-  }
 
-  .separator.mobileMenu {
-    width: 220px;
-  }
-  .menu-nav.mobileMenu {
-    font-size: 1rem;
-  }
-
-  .home-bg {
-    background-image: url(img/bgmobile.png);
-    background-position: top right;
-    background-size: 20rem;
-  }
-  .home-container {
-    padding: 0;
-  }
-  .header-nav {
-    width: 90%;
-  }
-  .home-photo {
-    padding-bottom: 50px;
-  }
-  .home-photo img {
-    width: 250px;
-  }
-  h1 {
-    font-size: 1.2rem;
-    line-height: 2rem;
-  }
-  h2 {
-    font-size: 1rem;
-  }
-
-  .main-container {
-    width: 90%;
-  }
-  .name-info img {
-    width: 20px;
-  }
-  h3 {
-    font-size: 1rem;
-  }
-  .text-info {
-    padding: 16px;
-  }
-  h4 {
-    font-size: 1rem;
-    line-height: 36px;
-  }
-  .button-info {
-    width: 140px;
-    height: 44px;
-  }
-  .button-info a {
-    font-size: 0.8rem;
-  }
-  .button-info img {
-    padding-left: 8px;
-    width: 30px;
-  }
-  .main-ability-container {
-    padding: 16px;
-  }
-
-  .ability img {
-    width: 80%;
-  }
-
-  h5 {
-    font-size: 0.75rem;
-  }
-  .projects-container {
-    padding: 16px;
-  }
-  .projects-show-img img {
-    border-radius: 5px;
-  }
-  h6 {
-    text-align: center;
-  }
-  .projects-show-text p {
-    font-size: 1rem;
-    line-height: 30px;
-  }
-  .button-deploy a,
-  .button-git a,
-  .figma {
-    font-size: 1rem;
-    color: #ffff;
-
-    padding: 10px 20px;
-  }
-  .buttonPrev img,
-  .buttonNext img {
-    width: 20px;
-  }
-  .buttonPrev,
-  .buttonNext {
-    width: 25px;
-  }
-  .visibleHidden {
-    gap: 15px;
-  }
-
-  .slide {
-    min-width: 140px;
-    height: 110px;
-  }
-
-  .tittle-slide {
-    font-size: 12px;
-    height: 32px;
-  }
-  .button-deploy a,
-  .button-git a,
-  .figma {
-    font-size: 0.75rem;
-
-    padding: 8px 14px;
-  }
-  .contacts-bg {
-    background-size: 20rem;
-  }
-  .contacts-img img {
-    width: 200px;
-  }
-  .contacts-container {
-    max-width: 320px;
-    width: 90%;
-  }
-  .contacts {
-    width: 80%;
-  }
-  .name-contact-info img {
-    width: 26px;
-  }
-  .name-contact-info p {
-    font-size: 1.75rem;
-  }
-
-  .contact-mail a {
-    font-size: 1rem;
-  }
-  .contact-phone p {
-    font-size: 1rem;
-  }
-  .contacts-social {
-    gap: 60px;
-  }
-  .name-developer {
-    font-size: 0.75rem;
+@media (min-width: 500px) {
+  .ability-info {
+    flex-wrap: nowrap;
   }
 }

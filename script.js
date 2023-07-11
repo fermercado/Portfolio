@@ -187,22 +187,51 @@ function navigationSlides() {
 navigationSlides();
 
 function animationText() {
-  const tittle = document.querySelector("h2");
+  const tittle = document.querySelector(".ui");
+  const teste = document.querySelector(".h2")
+  teste.style.color = "#000"
 
   function typeWriter(element) {
     const textArray = element.innerHTML.split("");
     element.innerHTML = "";
     textArray.forEach((item, index) => {
       setTimeout(() => {
+        element.style.color = "#abaaaa";
+      }, 85 * index);
+      
+      setTimeout(() => {
         element.innerHTML += item;
       }, 85 * index);
     });
   }
+  function animationText2() {
+    const tittle = document.querySelector(".h2");
+  
+    function typeWriter2(element) {
+      const textArray = element.innerHTML.split("");
+      element.innerHTML = "";
+      textArray.forEach((item, index) => {
+        
+        setTimeout(() => {
+          element.style.color = "#abaaaa";
+        }, 60 * index);
+        
+        setTimeout(() => {
+          element.innerHTML += item;
+        }, 60 * index);
+      });
+    }
+  
+    typeWriter2(tittle);
+  }
+  setTimeout(animationText2,1100);
 
   typeWriter(tittle);
 }
 animationText();
-setInterval(() => animationText(), 7000);
+setInterval(() =>animationText(),7000);
+
+
 
 const buttomMobileDescripiton = document.querySelectorAll(".arrow-tittle");
 

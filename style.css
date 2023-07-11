@@ -305,10 +305,7 @@ h4 {
 .button-info img {
   padding-left: 12px;
 }
-/* .main-ability {
-  width: 100%;
-  margin: auto;
-} */
+
 .main-ability-container {
   display: flex;
   width: 100%;
@@ -831,6 +828,7 @@ footer {
   .home-container {
     flex-direction: column-reverse;
     justify-content: center;
+    gap: 48px;
   }
 
   .home-name {
@@ -846,7 +844,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 120px;
   }
   .home-photo img {
     max-width: 340px;
